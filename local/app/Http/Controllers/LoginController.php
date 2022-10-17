@@ -16,5 +16,10 @@ class LoginController extends Controller
             dd("AUTHEN");
     }
 
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('/login');
+      }
+
 
 }

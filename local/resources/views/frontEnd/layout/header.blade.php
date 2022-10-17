@@ -24,7 +24,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
   <link rel="preload" as="style" href="local/public/assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="local/public/assets/mobirise/css/mbr-additional.css" type="text/css">
   
-
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
     <section data-bs-version="5.1" class="menu menu2 cid-t2RKXamSUN" once="menu" id="menu2-k">
