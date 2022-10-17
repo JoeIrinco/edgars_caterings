@@ -13,7 +13,7 @@
             </div> --}}
             <div class="col-lg-3 offset-lg-1 mbr-form" data-form-type="formoid">
                 <br><br><br>
-                <form action="{{route('login')}}" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="IVH5c+SGkAI0zG8QPrJWmiCWQ7Q2DgqLTp1d76mDsMhi/ykJwXaSyV/dQ5e0FhUqIZYTC5WESyjhclpb9UaJiaKGuJllRPtwOfnVdPczMwptiQRaS3ZfKnXfNjWyynhc">
+                <form action="" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="IVH5c+SGkAI0zG8QPrJWmiCWQ7Q2DgqLTp1d76mDsMhi/ykJwXaSyV/dQ5e0FhUqIZYTC5WESyjhclpb9UaJiaKGuJllRPtwOfnVdPczMwptiQRaS3ZfKnXfNjWyynhc">
                     <div class="row">
                         <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Success fully login</div>
                         <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">

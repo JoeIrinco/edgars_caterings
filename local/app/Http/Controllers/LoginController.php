@@ -13,7 +13,7 @@ class LoginController extends Controller
     }
 
     public function LogInAuthenticate(Request $request){
-dd("AUTHEN");
+            dd("AUTHEN");
     }
 
 
