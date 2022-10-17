@@ -7,6 +7,9 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CateringController;
 use App\Http\Controllers\GownController;
+use App\Http\Controllers\reservationController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +32,8 @@ Route::get('/about',[AboutController::class, 'index']);
 Route::get('/logout',[LoginController::class, 'logout']);
 Route::get('/services_catering',[CateringController::class, 'index']);
 Route::get('/services_gown',[GownController::class, 'index']);
+
+
+Route::get('/reservation/{services}',[reservationController::class, 'reservation_form']);
 
 

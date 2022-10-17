@@ -142,9 +142,9 @@
 </script>
 
 {{-- <script src="local/public/assets/bootstrap/js/bootstrap.bundle.min.js"></script>   --}}
-<script src="local/public/assets/smoothscroll/smooth-scroll.js"></script>  
-<script src="local/public/assets/ytplayer/index.js"></script>
-<script src="local/public/assets/dropdown/js/navbar-dropdown.js"></script>  
+<script src="{{public_path('assets/smoothscroll/smooth-scroll.js')}}"></script>  
+<script src="{{public_path('assets/ytplayer/index.js')}}"></script>
+<script src="{{public_path('assets/dropdown/js/navbar-dropdown.js')}}"></script>  
 {{-- <script src="local/public/assets/theme/js/script.js"></script>   --}}
 
 </body>

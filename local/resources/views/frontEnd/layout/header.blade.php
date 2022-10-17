@@ -9,20 +9,20 @@
   <meta property="og:image" content="">
   <meta name="twitter:title" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="local/public/assets/images/logo-96x57.png" type="image/x-icon">
+  <link rel="shortcut icon" href="{{public_path('assets/images/logo-96x57.png')}}" type="image/x-icon">
   <meta name="description" content="">
 
     <title>Edgar's Catering Services</title>
-  <link rel="stylesheet" href="local/public/assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="local/public/assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="local/public/assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="local/public/assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="local/public/assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="local/public/assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="local/public/assets/theme/css/style.css">
+  <link rel="stylesheet" href="{{public_path('assets/web/assets/mobirise-icons2/mobirise2.css')}}">
+  <link rel="stylesheet" href="{{public_path('assets/bootstrap/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{public_path('assets/bootstrap/css/bootstrap-grid.min.css')}}">
+  <link rel="stylesheet" href="{{public_path('assets/bootstrap/css/bootstrap-reboot.min.css')}}">
+  <link rel="stylesheet" href="{{public_path('assets/dropdown/css/style.css')}}">
+  <link rel="stylesheet" href="{{public_path('assets/socicon/css/styles.css')}}">
+  <link rel="stylesheet" href="{{public_path('assets/theme/css/style.css')}}">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="local/public/assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="local/public/assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="preload" as="style" href="{{public_path('assets/mobirise/css/mbr-additional.css')}}"><link rel="stylesheet" href="{{public_path('assets/mobirise/css/mbr-additional.css')}}" type="text/css">
   
   <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -34,7 +34,7 @@
                 <div class="navbar-brand">
                     <span class="navbar-logo">
                         <a href="">
-                            <img src="local/public/assets/images/logo-96x57.png" alt="Mobirise Website Builder" style="height: 4.6rem;">
+                            <img src="{{public_path('assets/images/logo-96x57.png')}}" alt="Mobirise Website Builder" style="height: 4.6rem;">
                         </a>
                     </span>
                     <span class="navbar-caption-wrap"><a class="navbar-caption text-white text-primary display-7" href="">Edgar's Catering Services</a></span>

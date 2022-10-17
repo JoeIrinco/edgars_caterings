@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2022 at 02:26 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.4.13
+-- Generation Time: Oct 17, 2022 at 04:17 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -92,6 +92,103 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_add_ons`
+--
+
+CREATE TABLE `tbl_add_ons` (
+  `id` int(11) NOT NULL,
+  `name` varchar(155) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `price` double(12,2) NOT NULL,
+  `is_active` int(11) NOT NULL,
+  `date_added` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_add_ons`
+--
+
+INSERT INTO `tbl_add_ons` (`id`, `name`, `description`, `price`, `is_active`, `date_added`) VALUES
+(1, 'Event Host', 'Event Host for all occation', 1500.00, 1, '2022-10-17 13:15:06'),
+(2, 'Clown', 'Clown', 1500.00, 1, '2022-10-17 13:15:20'),
+(3, 'Magician', 'Magician', 1500.00, 1, '2022-10-17 13:15:35'),
+(4, 'Addtional Food', 'Addtional Food', 250.00, 1, '2022-10-17 13:16:34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_customer`
+--
+
+CREATE TABLE `tbl_customer` (
+  `id` int(11) NOT NULL,
+  `last_name` varchar(155) NOT NULL,
+  `first_name` varchar(155) NOT NULL,
+  `middle_name` varchar(155) NOT NULL,
+  `contact_no` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `date_added` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_package_menu`
+--
+
+CREATE TABLE `tbl_package_menu` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `price` double(12,2) NOT NULL,
+  `image_path` text NOT NULL,
+  `is_active` int(11) NOT NULL,
+  `date_added` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_package_menu`
+--
+
+INSERT INTO `tbl_package_menu` (`id`, `name`, `description`, `category`, `price`, `image_path`, `is_active`, `date_added`) VALUES
+(1, 'Food Package 1', '1 meat\r\n1 veggies\r\n1 drinks\r\n30 packs', 'Food', 10000.00, '', 1, '2022-10-17 13:08:41'),
+(2, 'Food Package 2', '1 meat\r\n2 veggies\r\n1 drinks\r\n30 packs', 'Food', 12000.00, '', 1, '2022-10-17 13:09:01'),
+(3, 'Barong/Gown Package 1', '5 barong terno \r\n 5 gowns', 'Clothes', 12000.00, '', 1, '2022-10-17 13:10:06'),
+(4, 'Barong/Gown Package 2', '10 barong terno \r\n 10 gowns', 'Clothes', 20000.00, '', 1, '2022-10-17 13:10:22'),
+(5, 'Wedding Event', 'Decorations \nTable and Chairs\nSound System', 'Event', 20000.00, '', 1, '2022-10-17 13:16:59'),
+(6, 'Kids Party', 'Decorations \nTable and Chairs\nSound System', 'Event', 14500.00, '', 1, '2022-10-17 13:16:57'),
+(7, 'Christening', 'Decorations \nTable and Chairs\nSound System', 'Event', 14500.00, '', 1, '2022-10-17 13:17:02'),
+(8, 'Corporate', 'Decorations \nTable and Chairs\nSound System', 'Event', 14500.00, '', 1, '2022-10-17 13:17:06'),
+(9, 'Wedding Gown', 'Wedding Gown with Accesories', 'Clothes', 5000.00, '', 1, '2022-10-17 13:10:22'),
+(10, 'Debut Gown', 'Debut Gown with Accesories', 'Clothes', 5000.00, '', 1, '2022-10-17 13:10:22'),
+(11, 'Barong Tagalog', 'Barong Tagalog', 'Clothes', 1500.00, '', 1, '2022-10-17 13:10:22'),
+(12, 'Corporate Attire', 'Corporate Attire', 'Clothes', 1500.00, '', 1, '2022-10-17 13:10:22');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_reservation`
+--
+
+CREATE TABLE `tbl_reservation` (
+  `id` int(11) NOT NULL,
+  `customer_id` int(11) NOT NULL,
+  `event_id` int(11) NOT NULL,
+  `package_id` int(11) NOT NULL,
+  `date_reserved` date NOT NULL,
+  `time_reserved` time NOT NULL,
+  `no_of_packs` int(11) NOT NULL,
+  `location_type` varchar(255) NOT NULL,
+  `location_info` varchar(255) NOT NULL,
+  `status` int(11) NOT NULL COMMENT '0 - requested\r\n1 - checking\r\n2 - waiting for payment\r\n3 - booking confirmed\r\n4 - booking done\r\n9 - booking cancelled',
+  `date_added` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -111,7 +208,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$iaNNa3QGXwkVeOv5qSqRo.BZSFnalGccn5JJv/LkWI1/hqUfRCmEW', NULL, '2022-10-08 16:13:50', '2022-10-08 16:13:50');
+(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$oVkns2/RXT3YQLJDRw4D/uVriylbEKCihxAFF/bZAGrvW1sc9edtu', NULL, '2022-10-08 16:13:50', '2022-10-08 16:13:50');
 
 --
 -- Indexes for dumped tables
@@ -145,6 +242,24 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Indexes for table `tbl_add_ons`
+--
+ALTER TABLE `tbl_add_ons`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_customer`
+--
+ALTER TABLE `tbl_customer`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_package_menu`
+--
+ALTER TABLE `tbl_package_menu`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -172,6 +287,24 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_add_ons`
+--
+ALTER TABLE `tbl_add_ons`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tbl_customer`
+--
+ALTER TABLE `tbl_customer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_package_menu`
+--
+ALTER TABLE `tbl_package_menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`
