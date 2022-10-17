@@ -22,8 +22,8 @@ use App\Http\Controllers\GownController;
 
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/',[HomeController::class, 'index']);
-Route::get('/home',[HomeController::class, 'index']);
 Route::get('/contact',[ContactController::class, 'index']);
 Route::get('/about',[AboutController::class, 'index']);
 Route::get('/logout',[LoginController::class, 'logout']);
