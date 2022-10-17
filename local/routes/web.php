@@ -29,3 +29,6 @@ Route::get('/about',[AboutController::class, 'index']);
 Route::get('/login',[LoginController::class, 'index']);
 Route::get('/services_catering',[CateringController::class, 'index']);
 Route::get('/services_gown',[GownController::class, 'index']);
+
+//AUTHENTICATE
+Route::post('/login',[LoginController::class, 'index']);
