@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2022 at 04:17 PM
+-- Generation Time: Oct 18, 2022 at 06:02 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -127,8 +127,27 @@ CREATE TABLE `tbl_customer` (
   `middle_name` varchar(155) NOT NULL,
   `contact_no` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `message` text NOT NULL,
   `date_added` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_customer`
+--
+
+INSERT INTO `tbl_customer` (`id`, `last_name`, `first_name`, `middle_name`, `contact_no`, `email`, `date_added`) VALUES
+(4, 'Mickey', 'Mouse', 'Walter', '09333421408', 'ahrjhace@gmail.com', '2022-10-18 15:03:37');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_order`
+--
+
+CREATE TABLE `tbl_order` (
+  `id` int(11) NOT NULL,
+  `reservation_id` int(11) NOT NULL,
+  `menu_id` int(11) NOT NULL,
+  `price` double(12,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -175,16 +194,23 @@ INSERT INTO `tbl_package_menu` (`id`, `name`, `description`, `category`, `price`
 CREATE TABLE `tbl_reservation` (
   `id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
-  `event_id` int(11) NOT NULL,
   `package_id` int(11) NOT NULL,
-  `date_reserved` date NOT NULL,
-  `time_reserved` time NOT NULL,
-  `no_of_packs` int(11) NOT NULL,
-  `location_type` varchar(255) NOT NULL,
-  `location_info` varchar(255) NOT NULL,
+  `date_reserved` date DEFAULT NULL,
+  `time_reserved` time DEFAULT NULL,
+  `no_of_packs` int(11) DEFAULT NULL,
+  `location_type` varchar(255) DEFAULT NULL,
+  `location_info` varchar(255) DEFAULT NULL,
+  `message` text DEFAULT NULL,
   `status` int(11) NOT NULL COMMENT '0 - requested\r\n1 - checking\r\n2 - waiting for payment\r\n3 - booking confirmed\r\n4 - booking done\r\n9 - booking cancelled',
   `date_added` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_reservation`
+--
+
+INSERT INTO `tbl_reservation` (`id`, `customer_id`, `package_id`, `date_reserved`, `time_reserved`, `no_of_packs`, `location_type`, `location_info`, `message`, `status`, `date_added`) VALUES
+(1, 4, 6, NULL, NULL, NULL, NULL, NULL, 'This is a surprise party', 0, '2022-10-18 15:03:37');
 
 -- --------------------------------------------------------
 
@@ -254,9 +280,21 @@ ALTER TABLE `tbl_customer`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_order`
+--
+ALTER TABLE `tbl_order`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_package_menu`
 --
 ALTER TABLE `tbl_package_menu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_reservation`
+--
+ALTER TABLE `tbl_reservation`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -298,6 +336,12 @@ ALTER TABLE `tbl_add_ons`
 -- AUTO_INCREMENT for table `tbl_customer`
 --
 ALTER TABLE `tbl_customer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tbl_order`
+--
+ALTER TABLE `tbl_order`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -305,6 +349,12 @@ ALTER TABLE `tbl_customer`
 --
 ALTER TABLE `tbl_package_menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `tbl_reservation`
+--
+ALTER TABLE `tbl_reservation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -9,22 +9,83 @@
   <meta property="og:image" content="">
   <meta name="twitter:title" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="{{public_path('assets/images/logo-96x57.png')}}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{url('local/public/assets/images/logo-96x57.png')}}" type="image/x-icon">
   <meta name="description" content="">
 
     <title>Edgar's Catering Services</title>
-  <link rel="stylesheet" href="{{public_path('assets/web/assets/mobirise-icons2/mobirise2.css')}}">
-  <link rel="stylesheet" href="{{public_path('assets/bootstrap/css/bootstrap.min.css')}}">
-  <link rel="stylesheet" href="{{public_path('assets/bootstrap/css/bootstrap-grid.min.css')}}">
-  <link rel="stylesheet" href="{{public_path('assets/bootstrap/css/bootstrap-reboot.min.css')}}">
-  <link rel="stylesheet" href="{{public_path('assets/dropdown/css/style.css')}}">
-  <link rel="stylesheet" href="{{public_path('assets/socicon/css/styles.css')}}">
-  <link rel="stylesheet" href="{{public_path('assets/theme/css/style.css')}}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="{{url('local/public/assets/web/assets/mobirise-icons2/mobirise2.css')}}">
+  <link rel="stylesheet" href="{{url('local/public/assets/bootstrap/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url('local/public/assets/bootstrap/css/bootstrap-grid.min.css')}}">
+  <link rel="stylesheet" href="{{url('local/public/assets/bootstrap/css/bootstrap-reboot.min.css')}}">
+  <link rel="stylesheet" href="{{url('local/public/assets/dropdown/css/style.css')}}">
+  <link rel="stylesheet" href="{{url('local/public/assets/socicon/css/styles.css')}}">
+  <link rel="stylesheet" href="{{url('local/public/assets/theme/css/style.css')}}">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="{{public_path('assets/mobirise/css/mbr-additional.css')}}"><link rel="stylesheet" href="{{public_path('assets/mobirise/css/mbr-additional.css')}}" type="text/css">
+  <link rel="preload" as="style" href="{{url('local/public/assets/mobirise/css/mbr-additional.css')}}"><link rel="stylesheet" href="{{url('local/public/assets/mobirise/css/mbr-additional.css')}}" type="text/css">
   
   <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap&apos;);
+body {
+    background-color: #232331;
+    font-family: &apos;Roboto&apos;, sans-serif;
+}
+#captchaBackground {
+    height: 220px;
+    width: 250px;
+    background-color: #2d3748;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#captchaHeading {
+    color: white;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#submitButton {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: #08e5ff;
+    border: 0px;
+    font-weight: bold;
+}
+#refreshButton {
+    background-color: #08e5ff;
+    border: 0px;
+    font-weight: bold;
+}
+#textBox {
+    height: 25px;
+}
+.incorrectCaptcha {
+    color: #FF0000;
+}
+.correctCaptcha {
+    color: #7FFF00;
+}
+
+    </style>
+
+
+
+
+
+
+
+
+
+
 </head>
 <body>
     <section data-bs-version="5.1" class="menu menu2 cid-t2RKXamSUN" once="menu" id="menu2-k">
@@ -34,7 +95,7 @@
                 <div class="navbar-brand">
                     <span class="navbar-logo">
                         <a href="">
-                            <img src="{{public_path('assets/images/logo-96x57.png')}}" alt="Mobirise Website Builder" style="height: 4.6rem;">
+                            <img src="{{url('local/public/assets/images/logo-96x57.png')}}" alt="Mobirise Website Builder" style="height: 4.6rem;">
                         </a>
                     </span>
                     <span class="navbar-caption-wrap"><a class="navbar-caption text-white text-primary display-7" href="">Edgar's Catering Services</a></span>

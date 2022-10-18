@@ -35,5 +35,7 @@ Route::get('/services_gown',[GownController::class, 'index']);
 
 
 Route::get('/reservation/{services}',[reservationController::class, 'reservation_form']);
+Route::post('reservation/customer',[reservationController::class, 'reservation_customer']);
+Route::get('/reservation/finalize/{id}',[reservationController::class, 'finalize_order']);
 
 
