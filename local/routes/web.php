@@ -26,7 +26,15 @@ use App\Http\Controllers\reservationController;
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/',[HomeController::class, 'index']);
+// Route::get('/',[HomeController::class, 'index']);
+
+Route::get('/', function () {
+    return redirect('/landing');
+});
+
+
+Route::get('/landing',[AboutController::class, 'landing']);
+
 Route::get('/contact',[ContactController::class, 'index']);
 Route::get('/about',[AboutController::class, 'index']);
 Route::get('/logout',[LoginController::class, 'logout']);
@@ -37,5 +45,8 @@ Route::get('/services_gown',[GownController::class, 'index']);
 Route::get('/reservation/{services}',[reservationController::class, 'reservation_form']);
 Route::post('reservation/customer',[reservationController::class, 'reservation_customer']);
 Route::get('/reservation/finalize/{id}',[reservationController::class, 'finalize_order']);
+Route::post('add_order',[reservationController::class, 'add_order']);
+Route::post('add_addon',[reservationController::class, 'add_addon']);
+Route::post('submit_order',[reservationController::class, 'submit_order']);
 
 

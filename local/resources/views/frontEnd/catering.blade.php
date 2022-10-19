@@ -53,7 +53,7 @@
                             <strong>Wedding</strong></h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn btn-primary item-btn display-7" target="_blank">Read More &gt;</a></div></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <div class="mbr-section-btn item-footer mt-2"><a href="{{url('reservation/all')}}" class="btn btn-primary item-btn display-7" target="_blank">Read More &gt;</a></div></p>
                     </div>
                     
                 </div>
@@ -68,7 +68,7 @@
                             <strong>Kids Party</strong></h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn btn-primary item-btn display-7" target="_blank">Read More &gt;</a></div></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <div class="mbr-section-btn item-footer mt-2"><a href="{{url('reservation/all')}}" class="btn btn-primary item-btn display-7" target="_blank">Read More &gt;</a></div></p>
                     </div>
                     
                 </div>
@@ -83,7 +83,7 @@
                             <strong>Christening</strong></h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn btn-primary item-btn display-7" target="_blank">Read More &gt;</a></div></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <div class="mbr-section-btn item-footer mt-2"><a href="{{url('reservation/all')}}" class="btn btn-primary item-btn display-7" target="_blank">Read More &gt;</a></div></p>
                     </div>
                     
                 </div>
@@ -98,7 +98,7 @@
                             <strong>Corporate</strong></h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn btn-primary item-btn display-7" target="_blank">Read More &gt;</a></div></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <div class="mbr-section-btn item-footer mt-2"><a href="{{url('reservation/all')}}" class="btn btn-primary item-btn display-7" target="_blank">Read More &gt;</a></div></p>
                     </div>
                     
                 </div>

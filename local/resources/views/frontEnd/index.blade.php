@@ -76,7 +76,7 @@
                             <strong>Wedding</strong></h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="#" class="text-primary">Read more..</a></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
                     </div>
                     
                 </div>
@@ -91,7 +91,7 @@
                             <strong>Kids Party</strong></h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="#" class="text-primary">Read more..</a></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
                     </div>
                     
                 </div>
@@ -106,7 +106,7 @@
                             <strong>Christening</strong></h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="#" class="text-primary">Read more..</a></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
                     </div>
                     
                 </div>
@@ -121,7 +121,7 @@
                             <strong>Corporate</strong></h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="#" class="text-primary">Read more..</a></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
                     </div>
                     
                 </div>
@@ -151,7 +151,7 @@
                         </h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="#" class="text-primary">Read more..</a></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
                     </div>
                     
                 </div>
@@ -167,7 +167,7 @@
                         </h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="#" class="text-primary">Read more..</a></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
                     </div>
                     
                 </div>
@@ -183,7 +183,7 @@
                         </h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="#" class="text-primary">Read more..</a></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
                     </div>
                     
                 </div>
@@ -199,7 +199,7 @@
                         </h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="#" class="text-primary">Read more..</a></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
                     </div>
                     
                 </div>

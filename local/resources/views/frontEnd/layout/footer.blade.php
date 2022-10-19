@@ -80,6 +80,8 @@
 <script src="{{url('local/public/assets/js/plugins/metisMenu/jquery.metisMenu.js')}}"></script>
 <script src="{{url('local/public/assets/js/plugins/slimscroll/jquery.slimscroll.min.js')}}"></script>
 
+
+
 <!-- Custom and plugin javascript -->
 <script src="{{url('local/public/assets/js/inspinia.js')}}"></script>
 <script src="{{url('local/public/assets/js/plugins/pace/pace.min.js')}}"></script>
@@ -142,9 +144,9 @@
 </script>
 
 {{-- <script src="local/public/assets/bootstrap/js/bootstrap.bundle.min.js"></script>   --}}
-<script src="{{public_path('assets/smoothscroll/smooth-scroll.js')}}"></script>  
-<script src="{{public_path('assets/ytplayer/index.js')}}"></script>
-<script src="{{public_path('assets/dropdown/js/navbar-dropdown.js')}}"></script>  
+<script src="{{url('local/public/assets/smoothscroll/smooth-scroll.js')}}"></script>  
+<script src="{{url('local/public/assets/ytplayer/index.js')}}"></script>
+<script src="{{url('local/public/assets/dropdown/js/navbar-dropdown.js')}}"></script>  
 {{-- <script src="local/public/assets/theme/js/script.js"></script>   --}}
 
 </body>

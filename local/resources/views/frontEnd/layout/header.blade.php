@@ -15,6 +15,14 @@
     <title>Edgar's Catering Services</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
   <link rel="stylesheet" href="{{url('local/public/assets/web/assets/mobirise-icons2/mobirise2.css')}}">
   <link rel="stylesheet" href="{{url('local/public/assets/bootstrap/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{url('local/public/assets/bootstrap/css/bootstrap-grid.min.css')}}">
@@ -109,16 +117,16 @@ body {
                     </div>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="home">Home</a></li>
-                        <li class="nav-item dropdown"><a class="nav-link link text-white dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Servcices</a>
+                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="{{url('landing')}}">Home</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link link text-white dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Services</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown-978">
-                                <a class="text-white dropdown-item text-primary display-4" href="services_catering">Catering Services<br></a>
-                                <a class="text-white dropdown-item text-primary display-4" href="services_gown">Gown Reservation</a>
+                                <a class="text-white dropdown-item text-primary display-4" href="{{url('services_catering')}}">Catering Services<br></a>
+                                <a class="text-white dropdown-item text-primary display-4" href="{{url('services_gown')}}">Gown Reservation</a>
                             </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="about">About Us</a></li><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="contact">Contact Us</a></li></ul>
+                        <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="{{url('about')}}">About Us</a></li><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="{{url('contact')}}">Contact Us</a></li></ul>
                     
-                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="login">Login</a></div>
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="{{url('login')}}">Login</a></div>
                 </div>
             </div>
         </nav>

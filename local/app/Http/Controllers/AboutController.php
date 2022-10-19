@@ -9,4 +9,9 @@ class AboutController extends Controller
     public function index(){
         return view('frontEnd.about');
     }
+
+    public function landing(){
+        return view('frontEnd.index');
+    }
+
 }

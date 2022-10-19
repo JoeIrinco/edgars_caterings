@@ -11,7 +11,7 @@
                     <img class="w-100" src="local/public/assets/images/297522360-440525688088059-5095552785632348136-n-960x432.jpg" alt="">
                 </div>
             </div>
-            <div class="col-lg-3 offset-lg-1 mbr-form" data-form-type="formoid">
+            {{-- <div class="col-lg-3 offset-lg-1 mbr-form" data-form-type="formoid">
                 <form action="" method="" class="mbr-form form-with-styler" data-form-title="Form Name">
                     <input type="hidden" name="email" data-form-email="true" value="">
                     <div class="row">
@@ -36,16 +36,16 @@
                         <div class="col-lg-12 col-md col-sm-12 form-group mb-3" data-for="email">
                             <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form3-1k">
                         </div>
-                        <div class="col-lg-12 col-md col-sm-12 form-group mb-3" data-for="email">
+                        <div class="col-lg-12 col-md col-sm-12 form-group mb-3" data-for="email"> --}}
                             {{-- <input type="text" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form3-1k"> --}}
-                            <textarea class="form-control" placeholder="Message" value="" id="message-form3-1k"></textarea>
+                            {{-- <textarea class="form-control" placeholder="Message" value="" id="message-form3-1k"></textarea>
                         </div>
                         <div class="col-md-auto col-12 mbr-section-btn">
                             <button type="submit" class="btn btn-black display-4">Submit</button>
                         </div>
                     </div>
                 </form>
-            </div>
+            </div> --}}
             <div class="offset-lg-1"></div>
         </div>
     </div>
