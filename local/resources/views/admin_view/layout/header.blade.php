@@ -78,10 +78,10 @@
                     </li>
                     
                     <li>
-                        <a href=""><i class="fa fa-cart-plus"></i> <span class="nav-label">Events Add Ons</span></a>
+                        <a href="{{url('/admin/events/additional')}}"><i class="fa fa-cart-plus"></i> <span class="nav-label">Events Add Ons</span></a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-bars"></i> <span class="nav-label">Package Menu </span></a>
+                        <a href="{{url('/admin/package')}}"><i class="fa fa-bars"></i> <span class="nav-label">Package Menu </span></a>
                     </li>
                   
                     

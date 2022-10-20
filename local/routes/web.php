@@ -11,8 +11,8 @@ use App\Http\Controllers\reservationController;
 use App\Http\Controllers\AdminHomeController;
 use App\Http\Controllers\admin_reservationController;
 use App\Http\Controllers\CustomerController;
-
-
+use App\Http\Controllers\EventsAddController;
+use App\Http\Controllers\PackageController;
 
 
 
@@ -64,6 +64,12 @@ Route::post('approval_process',[admin_reservationController::class, 'approval_pr
 
 Route::get('/admin/customers',[CustomerController::class, 'index']);
 Route::post('customers/gentable',[CustomerController::class, 'genTable']);
+
+Route::get('/admin/events/additional',[EventsAddController::class, 'index']);
+Route::post('events/additional/gentable',[EventsAddController::class, 'gentable']);
+
+Route::get('/admin/package',[PackageController::class, 'index']);
+
     
 });
 
