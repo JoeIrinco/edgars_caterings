@@ -28,14 +28,17 @@
             <div class="ibox-content">
 
                 <div class="table-responsive">
-            <table class="table table-striped table-bordered table-hover dataTables-example" id="tbl_reservation">
+            <table class="table table-striped table-bordered table-hover" id="tbl_reservation">
             <thead>
             <tr>
                 <th>Customer Name</th>
                 <th>Date and Time </th>
+                <th>Location</th>
                 <th>No of Packs</th>
                 <th>Message</th>
                 <th>Total Price</th>
+                <th>Status</th>
+                
                 <th>Action</th>
             </tr>
             </thead>
@@ -58,12 +61,172 @@
     </div>
 </div>
 
+
+<div class="modal fade" id="order_modal" name="order_modal" tabindex="-1" role="dialog" aria-labelledby="order_m" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="order_m">Order List</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <table class="table table-striped table-bordered table-hover" id="tbl_order_list">
+                <thead>
+                <tr>
+                    <th>Order Name</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Sub Total</th>
+                </tr>
+                </thead>
+                <tbody>
+    
+                </tbody>
+                </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 @endsection
 @push("scripts")
     <script>
         var url ="{{url('/')}}";
 
+    function approve(id){
+        var yesNo = confirm("Confirmed Booking?");
+            if(yesNo){
+
+                $.ajax({
+                    type: "POST",
+                    url : url+"/approval_process",
+                    data: {
+                        "_token": "{{ csrf_token() }}",  
+                        "id": id,
+                        "status": "approve"
+                    },
+                    dataType: 'json',
+                        success: function(data) {
+                           alert(data);
+
+                           genTable();
+                        }
+                    });
+
+            }
+    }
+
+    function disapprove(id){
+        var yesNo = confirm("Disapprove Booking?");
+            if(yesNo){
+
+                $.ajax({
+                    type: "POST",
+                    url : url+"/approval_process",
+                    data: {
+                        "_token": "{{ csrf_token() }}",  
+                        "id": id,
+                        "status": "disapprove"
+                    },
+                    dataType: 'json',
+                        success: function(data) {
+                           alert(data);
+
+                           genTable();
+                        }
+                    });
+
+            }
+    }
+    function paid(id){
+        var yesNo = confirm("Received Payment?");
+            if(yesNo){
+
+                $.ajax({
+                    type: "POST",
+                    url : url+"/approval_process",
+                    data: {
+                        "_token": "{{ csrf_token() }}",  
+                        "id": id,
+                        "status": "paid"
+                    },
+                    dataType: 'json',
+                        success: function(data) {
+                           alert(data);
+
+                           genTable();
+                        }
+                    });
+
+            }
+    }
+    
+
+    function done(id){
+        var yesNo = confirm("Received Payment?");
+            if(yesNo){
+
+                $.ajax({
+                    type: "POST",
+                    url : url+"/approval_process",
+                    data: {
+                        "_token": "{{ csrf_token() }}",  
+                        "id": id,
+                        "status": "done"
+                    },
+                    dataType: 'json',
+                        success: function(data) {
+                           alert(data);
+
+                           genTable();
+                        }
+                    });
+
+            }
+    }
+    
+
+    function getOrderList(id){
+        $('#tbl_order_list').DataTable({
+                "bDestroy": true,
+                "autoWidth": false,
+                "searchHighlight": true,
+                "searching": true,
+                "processing": true,
+                "serverSide": true,
+                "orderMulti": true,
+                "order": [],
+                "pageLength": 10,
+                "ajax": {
+                    "url": url+'/reserv/getOrderList',
+                    "dataType": "json",
+                    "type": "POST",
+                    "data":{
+                        "_token": "{{ csrf_token() }}",   
+                        id: id
+                    }
+                },
+                "columns":[
+                    {'data':"order_name" },
+                    {'data':"qty"},
+                    {'data':"price"}, 
+                    {'data':"sub_total"},
+
+                ]
+            });
+
+    }
+
+
 genTable();
+
+
 
 function genTable(){
 $('#tbl_reservation').DataTable({
@@ -87,9 +250,12 @@ $('#tbl_reservation').DataTable({
                 "columns":[
                     {'data':"customer_name" },
                     {'data':"datetime"},
+                    {'data':"location"}, 
                     {'data':"no_packs"},
                     {'data':"message"},
                     {'data':"total_price"},
+                    {'data':"status"},
+                    
                     {'data':"action"},
 
 

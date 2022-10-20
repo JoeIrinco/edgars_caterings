@@ -56,6 +56,8 @@ Route::group(['middleware' => ['web', 'auth'] ], function () {
     Route::get('/admin/reservation',[AdminHomeController::class, 'reservation']);
 
 Route::post('reserv/gentable',[admin_reservationController::class, 'genTable']);
+Route::post('reserv/getOrderList',[admin_reservationController::class, 'getOrderList']);
+Route::post('approval_process',[admin_reservationController::class, 'approval_process']);
     
 
 

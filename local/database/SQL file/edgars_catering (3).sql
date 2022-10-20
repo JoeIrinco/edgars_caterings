@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2022 at 05:32 PM
+-- Generation Time: Oct 20, 2022 at 06:07 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -147,6 +147,7 @@ CREATE TABLE `tbl_order` (
   `id` int(11) NOT NULL,
   `reservation_id` int(11) NOT NULL,
   `menu_id` int(11) NOT NULL,
+  `add_on_id` int(11) NOT NULL,
   `qty` int(11) NOT NULL,
   `price` double(12,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -155,11 +156,11 @@ CREATE TABLE `tbl_order` (
 -- Dumping data for table `tbl_order`
 --
 
-INSERT INTO `tbl_order` (`id`, `reservation_id`, `menu_id`, `qty`, `price`) VALUES
-(1, 1, 6, 1, 14500.00),
-(2, 1, 1, 3, 10000.00),
-(3, 1, 2, 2, 1500.00),
-(4, 1, 3, 1, 1500.00);
+INSERT INTO `tbl_order` (`id`, `reservation_id`, `menu_id`, `add_on_id`, `qty`, `price`) VALUES
+(1, 1, 6, 0, 1, 14500.00),
+(2, 1, 1, 0, 3, 10000.00),
+(3, 1, 0, 3, 2, 1500.00),
+(4, 1, 0, 2, 1, 1500.00);
 
 -- --------------------------------------------------------
 
@@ -212,7 +213,7 @@ CREATE TABLE `tbl_reservation` (
   `location_type` varchar(255) DEFAULT NULL,
   `location_info` varchar(255) DEFAULT NULL,
   `message` text DEFAULT NULL,
-  `status` int(11) NOT NULL COMMENT '0 - requested\r\n1 - finalized\r\n2 - checking\r\n3 - waiting for payment\r\n4 - booking confirmed\r\n5 - booking done\r\n9 - booking cancelled',
+  `status` int(11) NOT NULL COMMENT '0 - requested\r\n1 - finalized\r\n2 - waiting for payment\r\n3 - reservation confirmed\r\n4 - disapproved\r\n5 - booking done\r\n9 - booking cancelled',
   `total_price` double(12,2) NOT NULL DEFAULT 0.00,
   `date_added` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -222,7 +223,7 @@ CREATE TABLE `tbl_reservation` (
 --
 
 INSERT INTO `tbl_reservation` (`id`, `customer_id`, `package_id`, `date_reserved`, `time_reserved`, `no_of_packs`, `location_type`, `location_info`, `message`, `status`, `total_price`, `date_added`) VALUES
-(1, 4, 6, '2022-10-19', '11:00:00', 2, 'customer_location', NULL, 'This is a surprise party', 1, 49000.00, '2022-10-19 15:14:08');
+(1, 4, 6, '2022-10-19', '11:00:00', 2, 'customer_location', NULL, 'This is a surprise party', 3, 49000.00, '2022-10-20 16:03:50');
 
 -- --------------------------------------------------------
 

@@ -181,6 +181,8 @@
                                 </td>
                                 <td>
                                     <input type="hidden" id="id_1" name="id_1" value="{{$initial_order->id}}">
+                                    <input type="hidden" id="ord_type_1" name="ord_type_1" value="package">
+                                    
                                     <label id="sub_total">{{$initial_order->price}}</label>
 
                                 </td>
@@ -266,9 +268,11 @@
            for(let x=0; x<row_count; x++){
                 var ind = x+1;
                 var id = $("#id_"+ind).val();
+                var ord_type = $("#ord_type_"+ind).val();
+                
                 var qty = $("#ord_qty_"+ind).val();
                 var price = $("#ord_price_"+ind).val();
-                orderArray[x] =id+":"+qty+":"+price ;
+                orderArray[x] =id+":"+qty+":"+price+":"+ord_type;
                 
             }
 
@@ -334,8 +338,10 @@
                         append_row = append_row + "<td><textarea class='form-control' disabled rows='1'>"+data.description+"</textarea></td>";
                         append_row = append_row + "<td><input type='text'  id='ord_qty_"+row_count+"' name='ord_qty_"+row_count+"' value='"+package_qty+"' disabled></td>";
                         append_row = append_row + "<td><input type='text'  id='ord_price_"+row_count+"' name='ord_price_"+row_count+"' value='"+data.price+"' disabled></td>";
-                        append_row = append_row + "<td><input type='hidden'  id='id_"+row_count+"' name='id_"+row_count+"' value='"+data.id+"' disabled>";
+                        append_row = append_row + "<td><input type='hidden'  id='id_"+row_count+"' name='id_"+row_count+"' value='"+data.id+"'> <input type='hidden'  id='ord_type_"+row_count+"' name='ord_type_"+row_count+"' value='package' disabled>";
 
+
+                            
                             append_row = append_row + "<label id='sub_total'>"+sub_total+"</label>";   
                     $("#order_tbl").append(append_row);
 
@@ -381,7 +387,7 @@
                         append_row = append_row + "<td><textarea class='form-control' disabled rows='1'>"+data.description+"</textarea></td>";
                         append_row = append_row + "<td><input type='text'  id='ord_qty_"+row_count+"' name='ord_qty_"+row_count+"' value='"+qty_on+"' disabled></td>";
                         append_row = append_row + "<td><input type='text'  id='ord_price_"+row_count+"' name='ord_price_"+row_count+"' value='"+data.price+"' disabled></td>";
-                        append_row = append_row + "<td><input type='hidden'  id='id_"+row_count+"' name='id_"+row_count+"' value='"+data.id+"' disabled>";
+                        append_row = append_row + "<td><input type='hidden'  id='id_"+row_count+"' name='id_"+row_count+"' value='"+data.id+"' ><input type='hidden'  id='ord_type_"+row_count+"' name='ord_type_"+row_count+"' value='addon' >";
 
                             append_row = append_row + "<label id='sub_total'>"+sub_total+"</label>";   
                     $("#order_tbl").append(append_row);

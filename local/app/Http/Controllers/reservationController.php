@@ -134,6 +134,15 @@ class reservationController extends Controller
             $menu_id = $data[0];
             $order_qty = $data[1];
             $order_price = $data[2];
+            $type = $data[3];
+
+            if($type == "addon"){
+                $menu_id = 0;
+                $add_on = $menu_id;
+            }else{
+                $menu_id = $menu_id;
+                $add_on = 0;
+            }
 
             $total_price += ($order_qty*$order_price);
 
@@ -141,6 +150,7 @@ class reservationController extends Controller
                 ->insert([
                     "reservation_id"=> $request->reservation_id,
                     "menu_id" => $menu_id,
+                    "add_on_id" => $add_on,
                     "qty" => $order_qty,
                     "price" => $order_price
                 ]);
