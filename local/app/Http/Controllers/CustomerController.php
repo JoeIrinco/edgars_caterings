@@ -36,6 +36,14 @@ class CustomerController extends Controller
 
             return $row->date_added;
         })
+
+        ->addColumn('action', function($row) {
+
+            $btn = '<a class="btn btn-primary btn-xs" title="Update" data-toggle="modal" onclick="getOrderList('.$row->id.');" data-target="#order_modal"><i style="color:white;" class="fa fa-pencil" aria-hidden="true"></i></a> ';
+            
+           
+            return $btn;
+        })
        
         
         ->make(true);

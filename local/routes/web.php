@@ -69,6 +69,7 @@ Route::get('/admin/events/additional',[EventsAddController::class, 'index']);
 Route::post('events/additional/gentable',[EventsAddController::class, 'gentable']);
 
 Route::get('/admin/package',[PackageController::class, 'index']);
+Route::post('package/gentable',[PackageController::class, 'gentable']);
 
     
 });

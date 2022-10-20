@@ -4,7 +4,7 @@
 
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>Customer</h2>
+        <h2>Customer Management</h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="#">Admin</a>
@@ -27,6 +27,8 @@
            
             <div class="ibox-content">
 
+                <a class="btn btn-success" onclick="" title="confirm reservation" data-target="#order_modal"><i style="color:white;" class="fa fa-plus" aria-hidden="true"> Add</i> </a><br><br>
+
                 <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover" id="tbl_customer">
             <thead>
@@ -35,6 +37,7 @@
                 <th>Contact No.</th>
                 <th>Email</th>
                 <th>Date Added</th>
+                <th>Action</th>
             </tr>
             </thead>
             <tbody>
@@ -127,7 +130,8 @@ $('#tbl_customer').DataTable({
                     {'data':"customer_name" },
                     {'data':"contact_no"},
                     {'data':"email"}, 
-                    {'data':"date_added"}
+                    {'data':"date_added"},
+                    {'data':"action"}
                     
                 ]
             });

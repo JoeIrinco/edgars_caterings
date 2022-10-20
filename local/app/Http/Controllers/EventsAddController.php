@@ -15,13 +15,13 @@ class EventsAddController extends Controller
 
     public function genTable(){
         
-        $customer = DB::table("tbl_add_ons")
+        $addOn = DB::table("tbl_add_ons")
             ->select("tbl_add_ons.*")
             ->get();
 
-        $customer = collect($customer);
+        $addOn = collect($addOn);
       
-        return Datatables::of($customer)
+        return Datatables::of($addOn)
         ->addColumn('name', function($row) {
             return $row->name;
         })
@@ -30,7 +30,7 @@ class EventsAddController extends Controller
             return $row->description;
         })
         ->addColumn('price', function($row) {
-            return $row->price;
+            return "Php. ".number_format($row->price,2);
         })
         ->addColumn('is_active', function($row) {
 
@@ -49,9 +49,14 @@ class EventsAddController extends Controller
         })
 
         ->addColumn('action', function($row) {
-            $btn = '<a class="btn btn-primary btn-xs" title="Show Order List" data-toggle="modal" onclick="getOrderList('.$row->id.');" data-target="#order_modal"><i style="color:white;" class="fa fa-pencil" aria-hidden="true"></i></a> ';
-            $btn .= '<a class="btn btn-warning btn-xs" onclick="approve('.$row->id.');" title="confirm reservation" data-target="#order_modal"><i style="color:white;" class="fa fa-ban" aria-hidden="true"></i></a> ';
-
+            
+            if($row->is_active == "1"){
+                $btn = '<a class="btn btn-primary btn-xs" title="Update" data-toggle="modal" onclick="getOrderList('.$row->id.');" data-target="#order_modal"><i style="color:white;" class="fa fa-pencil" aria-hidden="true"></i></a> ';
+                $btn .= '<a class="btn btn-warning btn-xs" onclick="approve('.$row->id.');" title="Set to Innactivate" data-target="#order_modal"><i style="color:white;" class="fa fa-ban" aria-hidden="true"></i></a> ';
+            }elseif($row->is_active == "0"){
+                $btn = '<a class="btn btn-primary btn-xs" title="Update" data-toggle="modal" onclick="getOrderList('.$row->id.');" data-target="#order_modal"><i style="color:white;" class="fa fa-pencil" aria-hidden="true"></i></a> ';
+                $btn .= '<a class="btn btn-success btn-xs" onclick="approve('.$row->id.');" title="Set to Active" data-target="#order_modal"><i style="color:white;" class="fa fa-check" aria-hidden="true"></i></a> ';
+            }
             return $btn;
         })
        

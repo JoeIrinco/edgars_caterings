@@ -26,15 +26,20 @@
         <div class="ibox ">
            
             <div class="ibox-content">
+                <a class="btn btn-success" onclick="" title="confirm reservation" data-target="#order_modal"><i style="color:white;" class="fa fa-plus" aria-hidden="true"> Add</i> </a><br><br>
 
                 <div class="table-responsive">
-            <table class="table table-striped table-bordered table-hover" id="tbl_customer">
+            <table class="table table-striped table-bordered table-hover" id="tbl_package">
             <thead>
             <tr>
-                <th>Full Name</th>
-                <th>Contact No.</th>
-                <th>Email</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Active</th>
                 <th>Date Added</th>
+                <th>Action</th>
             </tr>
             </thead>
             <tbody>
@@ -105,7 +110,7 @@ genTable();
 
 function genTable(){
 
-$('#tbl_customer').DataTable({
+$('#tbl_package').DataTable({
                 "bDestroy": true,
                 "autoWidth": false,
                 "searchHighlight": true,
@@ -116,7 +121,7 @@ $('#tbl_customer').DataTable({
                 "order": [],
                 "pageLength": 10,
                 "ajax": {
-                    "url": url+'/customers/gentable',
+                    "url": url+'/package/gentable',
                     "dataType": "json",
                     "type": "POST",
                     "data":{
@@ -124,10 +129,14 @@ $('#tbl_customer').DataTable({
                     }
                 },
                 "columns":[
-                    {'data':"customer_name" },
-                    {'data':"contact_no"},
-                    {'data':"email"}, 
-                    {'data':"date_added"}
+                    {'data':"name" },
+                    {'data':"description"},
+                    {'data':"category"}, 
+                    {'data':"price"},
+                    {'data':"image_path"},
+                    {'data':"is_active"},
+                    {'data':"date_added"},
+                    {'data':"action"}
                     
                 ]
             });
