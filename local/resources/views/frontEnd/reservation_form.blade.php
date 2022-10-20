@@ -161,7 +161,7 @@
 
                     $.ajax({
 						method: 'POST',
-						url: SITE_URL,
+						url: "{{url('reservation/customer')}}",
 						data: {
 							package : package, 
                             last_name : last_name, 

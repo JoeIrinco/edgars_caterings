@@ -126,21 +126,21 @@ class reservationController extends Controller
       }
 
       public function submit_order(Request $request){
-
-      
             $total_price = 0;
-        foreach($request->order as $order){
+        foreach($request->order as $key => $order){
             $data = explode(':',$order);
-            $menu_id = $data[0];
+            $menu_id_arr = $data[0];
             $order_qty = $data[1];
             $order_price = $data[2];
             $type = $data[3];
-
+           
             if($type == "addon"){
+              
                 $menu_id = 0;
-                $add_on = $menu_id;
+                $add_on = $menu_id_arr;
+          
             }else{
-                $menu_id = $menu_id;
+                $menu_id = $menu_id_arr;
                 $add_on = 0;
             }
 
