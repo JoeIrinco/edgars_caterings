@@ -66,28 +66,53 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="order_m">Order List</h5>
+          <h5 class="modal-title" id="order_m">Update Menu</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            <table class="table table-striped table-bordered table-hover" id="tbl_order_list">
-                <thead>
-                <tr>
-                    <th>Order Name</th>
-                    <th>Qty</th>
-                    <th>Price</th>
-                    <th>Sub Total</th>
-                </tr>
-                </thead>
-                <tbody>
-    
-                </tbody>
-                </table>
+
+            <div class="form-group">
+                <label>Package Name</label> 
+                <input type="text" placeholder="Enter email" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Description</label> 
+                <input type="text" placeholder="Enter email" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Category</label> 
+                <select class="form-control m-b" name="">
+                    <option value="Food">Food</option>
+                    <option  value="Clothes">Clothes</option>
+                    <option  value="Event">Event</option>
+                    <option  value="Others">Others</option>
+                </select>
+                
+            </div>
+
+
+            <div class="form-group">
+                <label>Price (PHP)</label> 
+                <input type="number" placeholder="PHP 00.00" class="form-control">
+            </div>
+
+            
+            <div class="form-group">
+                <label>Image</label> 
+                <div class="custom-file">
+                    <input id="logo" type="file" class="custom-file-input">
+                    <label for="logo" class="custom-file-label">Choose file...</label>
+                </div> 
+            </div>
+
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
       </div>
     </div>
@@ -143,6 +168,10 @@ $('#tbl_package').DataTable({
 
 }
 
+    $('.custom-file-input').on('change', function() {
+    let fileName = $(this).val().split('\\').pop();
+    $(this).next('.custom-file-label').addClass("selected").html(fileName);
+    });
 
     </script>
 @endpush
