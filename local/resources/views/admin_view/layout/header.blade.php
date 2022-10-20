@@ -10,6 +10,19 @@
     <title>Admin | Dashboard</title>
 
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
+    <link rel="stylesheet" href="{{ URL::asset('/backend/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}">
+
+
     <link href="{{url('local/public/admin_assets/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{url('local/public/admin_assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
 
@@ -56,7 +69,7 @@
                     </li> --}}
 
                     <li>
-                        <a href=""><i class="fa fa-dashboard"></i> <span class="nav-label">Reservation Request </span></a>
+                        <a href="{{url('admin/reservation')}}"><i class="fa fa-dashboard"></i> <span class="nav-label">Reservation Request </span></a>
                     </li>
                     <li>
                         <a href=""><i class="fa fa-dashboard"></i> <span class="nav-label">Customer Management </span></a>

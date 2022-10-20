@@ -9,6 +9,8 @@ use App\Http\Controllers\CateringController;
 use App\Http\Controllers\GownController;
 use App\Http\Controllers\reservationController;
 use App\Http\Controllers\AdminHomeController;
+use App\Http\Controllers\admin_reservationController;
+
 
 
 /*
@@ -51,6 +53,13 @@ Route::post('submit_order',[reservationController::class, 'submit_order']);
 
 Route::group(['middleware' => ['web', 'auth'] ], function () {
     Route::get('/admin/home',[AdminHomeController::class, 'index']);
+    Route::get('/admin/reservation',[AdminHomeController::class, 'reservation']);
+
+Route::post('reserv/gentable',[admin_reservationController::class, 'genTable']);
+    
+
+
+
 });
 
 

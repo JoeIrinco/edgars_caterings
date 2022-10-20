@@ -10,4 +10,9 @@ class AdminHomeController extends Controller
         return view('admin_view.home');
     }
 
+    public function reservation(){
+        return view('admin_view.reservation_list');
+    }
+
+
 }
