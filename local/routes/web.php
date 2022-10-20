@@ -49,7 +49,9 @@ Route::post('add_order',[reservationController::class, 'add_order']);
 Route::post('add_addon',[reservationController::class, 'add_addon']);
 Route::post('submit_order',[reservationController::class, 'submit_order']);
 
+Route::group(['middleware' => ['web', 'auth'] ], function () {
+    Route::get('/admin/home',[AdminHomeController::class, 'index']);
+});
 
-Route::get('/admin/home',[AdminHomeController::class, 'index']);
 
 
