@@ -74,7 +74,7 @@
                         <a href="{{url('admin/reservation')}}"><i class="fa fa-calendar-check-o "></i> <span class="nav-label">Reservation Request </span></a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-users"></i> <span class="nav-label">Customer Management </span></a>
+                        <a href="{{url('admin/customers')}}"><i class="fa fa-users"></i> <span class="nav-label">Customer Management </span></a>
                     </li>
                     
                     <li>

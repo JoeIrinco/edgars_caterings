@@ -10,6 +10,10 @@ use App\Http\Controllers\GownController;
 use App\Http\Controllers\reservationController;
 use App\Http\Controllers\AdminHomeController;
 use App\Http\Controllers\admin_reservationController;
+use App\Http\Controllers\CustomerController;
+
+
+
 
 
 
@@ -43,7 +47,6 @@ Route::get('/logout',[LoginController::class, 'logout']);
 Route::get('/services_catering',[CateringController::class, 'index']);
 Route::get('/services_gown',[GownController::class, 'index']);
 
-
 Route::get('/reservation/{services}',[reservationController::class, 'reservation_form']);
 Route::post('reservation/customer',[reservationController::class, 'reservation_customer']);
 Route::get('/reservation/finalize/{id}',[reservationController::class, 'finalize_order']);
@@ -52,16 +55,16 @@ Route::post('add_addon',[reservationController::class, 'add_addon']);
 Route::post('submit_order',[reservationController::class, 'submit_order']);
 
 Route::group(['middleware' => ['web', 'auth'] ], function () {
-    Route::get('/admin/home',[AdminHomeController::class, 'index']);
-    Route::get('/admin/reservation',[AdminHomeController::class, 'reservation']);
+Route::get('/admin/home',[AdminHomeController::class, 'index']);
 
+Route::get('/admin/reservation',[AdminHomeController::class, 'reservation']);
 Route::post('reserv/gentable',[admin_reservationController::class, 'genTable']);
 Route::post('reserv/getOrderList',[admin_reservationController::class, 'getOrderList']);
 Route::post('approval_process',[admin_reservationController::class, 'approval_process']);
+
+Route::get('/admin/customers',[CustomerController::class, 'index']);
+Route::post('customers/gentable',[CustomerController::class, 'genTable']);
     
-
-
-
 });
 
 
