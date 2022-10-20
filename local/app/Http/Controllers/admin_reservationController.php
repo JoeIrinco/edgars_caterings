@@ -43,9 +43,31 @@ class admin_reservationController extends Controller
             return  json_encode("Deliverables Completed");
             //EMAIL HERE
         }
+        elseif($request->status == "cancel"){
+            DB::table("tbl_reservation")
+            ->where("id", $request->id)
+            ->update(["status" =>9]);
+
+            return  json_encode("Booking Cancelled");
+            //EMAIL HERE
+        }
+        elseif($request->status == "receipt"){
+            DB::table("tbl_reservation")
+            ->where("id", $request->id)
+            ->update(["status" =>6]);
+
+            return  json_encode("Receipt Sent");
+            //EMAIL HERE
+        }
+        elseif($request->status == "resend_receipt"){
+          
+            return  json_encode("Receipt resent");
+            //EMAIL HERE
+        }else{
+            return json_encode("FUNCTION UNDEFINED");
+        }
         
-
-
+        
       
     }
 
@@ -90,10 +112,14 @@ class admin_reservationController extends Controller
                 }elseif($row->status == "4"){
                     return "Disapproved Reservation";
                 }elseif($row->status == "5"){
-                    return "Reservation Done";
+                    return "Deliverables Completed";
+                }elseif($row->status == "6"){
+                    return "Receipt Sent";
                 }elseif($row->status == "9"){
                     return "Booking Cancelled";
-                }else{
+                }
+                
+                else{
                     return "Unknown Status";
                 }
 
@@ -113,12 +139,24 @@ class admin_reservationController extends Controller
                 $btn .= '<a class="btn btn-danger" onclick="disapprove('.$row->id.');" title="disapprove reservation" data-target="#order_modal"><i style="color:white;" class="fa fa-window-close" aria-hidden="true"></i></a> ';
                 }
                 elseif($row->status == "3"){
-                    $btn .= '<a class="btn btn-success" onclick="done('.$row->id.');" title="Delivered" data-target="#order_modal"><i style="color:white;" class="fa-flag-checkered" aria-hidden="true"></i></a> ';
+                    $btn .= '<a class="btn btn-success" onclick="done('.$row->id.');" title="Delivered" data-target="#order_modal"><i style="color:white;" class="fa fa-flag-checkered" aria-hidden="true"></i></a> ';
 
                 $btn .= '<a class="btn btn-danger" onclick="cancel('.$row->id.');" title="Cancel Booking" data-target="#order_modal"><i style="color:white;" class="fa fa-reply-all" aria-hidden="true"></i></a> ';
                 }
+                elseif($row->status == "4"){
+                    $btn .= '<a class="btn btn-success" onclick="paid('.$row->id.');" title="Payment Received" data-target="#order_modal"><i style="color:white;" class="fa fa-usd" aria-hidden="true"></i></a> ';
 
+                }
+                elseif($row->status == "5"){
+                    $btn .= '<a class="btn btn-success" onclick="receipt('.$row->id.');" title="Send Receipt" data-target="#order_modal"><i style="color:white;" class="fa fa-paper-plane" aria-hidden="true"></i></a> ';
 
+                    $btn .= '<a class="btn btn-danger" onclick="cancel('.$row->id.');" title="Cancel Booking" data-target="#order_modal"><i style="color:white;" class="fa fa-reply-all" aria-hidden="true"></i></a> ';
+
+                }
+                elseif($row->status == "6"){
+                    $btn .= '<a class="btn btn-success" onclick="resend_receipt('.$row->id.');" title="Resend Receipt" data-target="#order_modal"><i style="color:white;" class="fa fa-share"" aria-hidden="true"></i></a> ';
+
+                }
                 
 
 

@@ -169,7 +169,7 @@
     
 
     function done(id){
-        var yesNo = confirm("Received Payment?");
+        var yesNo = confirm("Delivered Reservation?");
             if(yesNo){
 
                 $.ajax({
@@ -179,6 +179,75 @@
                         "_token": "{{ csrf_token() }}",  
                         "id": id,
                         "status": "done"
+                    },
+                    dataType: 'json',
+                        success: function(data) {
+                           alert(data);
+
+                           genTable();
+                        }
+                    });
+
+            }
+    }
+    
+
+    function cancel(id){
+        var yesNo = confirm("Cancel Booking?");
+            if(yesNo){
+
+                $.ajax({
+                    type: "POST",
+                    url : url+"/approval_process",
+                    data: {
+                        "_token": "{{ csrf_token() }}",  
+                        "id": id,
+                        "status": "cancel"
+                    },
+                    dataType: 'json',
+                        success: function(data) {
+                           alert(data);
+
+                           genTable();
+                        }
+                    });
+
+            }
+    }
+    
+    function receipt(id){
+        var yesNo = confirm("Send Receipt to Client?");
+            if(yesNo){
+
+                $.ajax({
+                    type: "POST",
+                    url : url+"/approval_process",
+                    data: {
+                        "_token": "{{ csrf_token() }}",  
+                        "id": id,
+                        "status": "receipt"
+                    },
+                    dataType: 'json',
+                        success: function(data) {
+                           alert(data);
+
+                           genTable();
+                        }
+                    });
+
+            }
+    }
+    function resend_receipt(id){
+        var yesNo = confirm("Resend Receipt to Client?");
+            if(yesNo){
+
+                $.ajax({
+                    type: "POST",
+                    url : url+"/approval_process",
+                    data: {
+                        "_token": "{{ csrf_token() }}",  
+                        "id": id,
+                        "status": "resend_receipt"
                     },
                     dataType: 'json',
                         success: function(data) {
@@ -229,6 +298,8 @@ genTable();
 
 
 function genTable(){
+
+
 $('#tbl_reservation').DataTable({
                 "bDestroy": true,
                 "autoWidth": false,
