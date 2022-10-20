@@ -71,17 +71,17 @@
                     </li> --}}
 
                     <li>
-                        <a href="{{url('admin/reservation')}}"><i class="fa fa-dashboard"></i> <span class="nav-label">Reservation Request </span></a>
+                        <a href="{{url('admin/reservation')}}"><i class="fa fa-calendar-check-o "></i> <span class="nav-label">Reservation Request </span></a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-dashboard"></i> <span class="nav-label">Customer Management </span></a>
+                        <a href=""><i class="fa fa-users"></i> <span class="nav-label">Customer Management </span></a>
                     </li>
                     
                     <li>
-                        <a href=""><i class="fa fa-dashboard"></i> <span class="nav-label">Events Add Ons</span></a>
+                        <a href=""><i class="fa fa-cart-plus"></i> <span class="nav-label">Events Add Ons</span></a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-dashboard"></i> <span class="nav-label">Package Menu </span></a>
+                        <a href=""><i class="fa fa-bars"></i> <span class="nav-label">Package Menu </span></a>
                     </li>
                   
                     
