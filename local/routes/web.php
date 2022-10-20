@@ -8,7 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CateringController;
 use App\Http\Controllers\GownController;
 use App\Http\Controllers\reservationController;
-
+use App\Http\Controllers\AdminHomeController;
 
 
 /*
@@ -48,5 +48,8 @@ Route::get('/reservation/finalize/{id}',[reservationController::class, 'finalize
 Route::post('add_order',[reservationController::class, 'add_order']);
 Route::post('add_addon',[reservationController::class, 'add_addon']);
 Route::post('submit_order',[reservationController::class, 'submit_order']);
+
+
+Route::get('/admin/home',[AdminHomeController::class, 'index']);
 
 
