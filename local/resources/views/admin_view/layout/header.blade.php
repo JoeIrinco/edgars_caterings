@@ -26,6 +26,12 @@
     <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
 
     <link href="{{url('local/public/admin_assets/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <script src="{{url('local/public/js/HoldOn.min.js')}}" type="text/javascript"></script>
+
+    <link href="{{url('local/public/css/HoldOn.min.css')}}" rel="stylesheet">
+
+
     <link href="{{url('local/public/admin_assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
 
     <!-- Toastr style -->

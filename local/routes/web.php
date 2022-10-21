@@ -13,6 +13,7 @@ use App\Http\Controllers\admin_reservationController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\EventsAddController;
 use App\Http\Controllers\PackageController;
+use App\Http\Controllers\sendEmailController;
 
 
 
@@ -54,6 +55,10 @@ Route::post('add_order',[reservationController::class, 'add_order']);
 Route::post('add_addon',[reservationController::class, 'add_addon']);
 Route::post('submit_order',[reservationController::class, 'submit_order']);
 
+
+Route::get('send_status_email/{emailto}/{nameto}/{reservationid}/{datetime}/{totalprice}/{status}',[sendEmailController::class, 'sendEmail']);
+
+
 Route::group(['middleware' => ['web', 'auth'] ], function () {
 Route::get('/admin/home',[AdminHomeController::class, 'index']);
 
@@ -61,6 +66,7 @@ Route::get('/admin/reservation',[AdminHomeController::class, 'reservation']);
 Route::post('reserv/gentable',[admin_reservationController::class, 'genTable']);
 Route::post('reserv/getOrderList',[admin_reservationController::class, 'getOrderList']);
 Route::post('approval_process',[admin_reservationController::class, 'approval_process']);
+
 
 Route::get('/admin/customers',[CustomerController::class, 'index']);
 Route::post('customers/gentable',[CustomerController::class, 'genTable']);

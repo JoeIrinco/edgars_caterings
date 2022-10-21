@@ -100,9 +100,12 @@
         var url ="{{url('/')}}";
 
     function approve(id){
+
         var yesNo = confirm("Confirmed Booking?");
             if(yesNo){
-
+  HoldOn.open({
+     theme:"sk-cube-grid"
+        });
                 $.ajax({
                     type: "POST",
                     url : url+"/approval_process",
@@ -114,7 +117,7 @@
                     dataType: 'json',
                         success: function(data) {
                            alert(data);
-
+                            HoldOn.close();
                            genTable();
                         }
                     });
@@ -123,9 +126,12 @@
     }
 
     function disapprove(id){
+       
         var yesNo = confirm("Disapprove Booking?");
             if(yesNo){
-
+                HoldOn.open({
+     theme:"sk-cube-grid"
+        });
                 $.ajax({
                     type: "POST",
                     url : url+"/approval_process",
@@ -137,7 +143,7 @@
                     dataType: 'json',
                         success: function(data) {
                            alert(data);
-
+                            HoldOn.close();
                            genTable();
                         }
                     });
@@ -145,9 +151,12 @@
             }
     }
     function paid(id){
+    
         var yesNo = confirm("Received Payment?");
             if(yesNo){
-
+                HoldOn.open({
+     theme:"sk-cube-grid"
+        });
                 $.ajax({
                     type: "POST",
                     url : url+"/approval_process",
@@ -159,19 +168,23 @@
                     dataType: 'json',
                         success: function(data) {
                            alert(data);
-
+                           HoldOn.close();
                            genTable();
                         }
                     });
 
             }
+        
     }
     
 
     function done(id){
+   
         var yesNo = confirm("Delivered Reservation?");
             if(yesNo){
-
+                HoldOn.open({
+     theme:"sk-cube-grid"
+        });
                 $.ajax({
                     type: "POST",
                     url : url+"/approval_process",
@@ -183,19 +196,23 @@
                     dataType: 'json',
                         success: function(data) {
                            alert(data);
-
+                           HoldOn.close();
                            genTable();
                         }
                     });
 
             }
+       
     }
     
 
     function cancel(id){
+       
         var yesNo = confirm("Cancel Booking?");
             if(yesNo){
-
+                HoldOn.open({
+     theme:"sk-cube-grid"
+        });
                 $.ajax({
                     type: "POST",
                     url : url+"/approval_process",
@@ -207,18 +224,22 @@
                     dataType: 'json',
                         success: function(data) {
                            alert(data);
-
+                           HoldOn.close();
                            genTable();
                         }
                     });
 
             }
+          
     }
     
     function receipt(id){
+       
         var yesNo = confirm("Send Receipt to Client?");
             if(yesNo){
-
+                HoldOn.open({
+     theme:"sk-cube-grid"
+        });
                 $.ajax({
                     type: "POST",
                     url : url+"/approval_process",
@@ -230,17 +251,21 @@
                     dataType: 'json',
                         success: function(data) {
                            alert(data);
-
+                           HoldOn.close();
                            genTable();
                         }
                     });
 
             }
+           
     }
     function resend_receipt(id){
+       
         var yesNo = confirm("Resend Receipt to Client?");
             if(yesNo){
-
+                HoldOn.open({
+     theme:"sk-cube-grid"
+        });
                 $.ajax({
                     type: "POST",
                     url : url+"/approval_process",
@@ -252,12 +277,14 @@
                     dataType: 'json',
                         success: function(data) {
                            alert(data);
-
+                           HoldOn.close();
                            genTable();
                         }
                     });
 
             }
+
+            
     }
     
 
@@ -298,7 +325,7 @@ genTable();
 
 
 function genTable(){
-
+ 
 
 $('#tbl_reservation').DataTable({
                 "bDestroy": true,

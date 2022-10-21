@@ -6,16 +6,68 @@ use Illuminate\Http\Request;
 
 use DB;
 use Yajra\Datatables\DataTables;
-
+use Mail;
 class admin_reservationController extends Controller
 {
 
+    private function sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,$status){
+ 
+        $status_msg = "";
+        if($status == "2"){
+            $status_msg = "Reservation is available, Please Pay immediately";
+        }elseif($status == "3"){
+            $status_msg = "Payment Received by Edgar's Catering";
+        }elseif($status == "4"){
+            $status_msg = "Reservation is not available, Reservation is disapproved";
+        }elseif($status == "5"){
+            $status_msg = "All Deliverables is complete, PLease wait for the receipt";
+        }elseif($status == "6"){
+            $status_msg = "Receipt Sent";
+        }elseif($status == "9"){
+            $status_msg = "Booking Cancelled";
+        }
+
+       try {
+        
+        $data = array('name_to'=> $nameto, "status_msg" => $status_msg, 'reservationid' => $reservationid,'datetime'=>$datetime, 'packs'=>$packs,'totalprice'=>'Php '.number_format($totalprice,2));
+        //$data = "";
+    	$email = "ilustrado.lourd@gmail.com";
+      
+            Mail::send('mail', $data, function($message) use ($email, $emailto, $nameto){
+                $message->to($emailto, $nameto)->subject('EDGARDS CATERING');
+                $message->from($email,'EDGARDS CATERING');
+            });
+       
+            return "true";
+       } catch (\Throwable $th) {
+        return $th->getMessage();
+       }
+       
+
+    }
+
+
     public function approval_process(Request $request){
         
+        $reservation_info = DB::table("tbl_reservation")
+        ->where("id", $request->id)
+        ->first();
+
+        $customer_info = DB::table("tbl_customer")
+            ->where("id", $reservation_info->customer_id)
+            ->first();
+
+        $nameto = $customer_info->last_name.", ".$customer_info->first_name;
+        $emailto = $customer_info->email;
+        $reservationid = $reservation_info->date_reserved."-".$reservation_info->id;
+       $datetime = $reservation_info->date_reserved." ".$reservation_info->time_reserved;
+       $totalprice = $reservation_info->total_price;
+        $packs = $reservation_info->no_of_packs;
         if($request->status == "approve"){
             DB::table("tbl_reservation")
             ->where("id", $request->id)
             ->update(["status" => 2]);
+            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"2");
 
             return  json_encode("Confirmed! \n waiting for the payment");
 
@@ -25,6 +77,7 @@ class admin_reservationController extends Controller
             ->where("id", $request->id)
             ->update(["status" => 4]);
 
+            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"4");
             return  json_encode("Disapproved Booking Complete");
             //EMAIL HERE
         }elseif($request->status == "paid"){
@@ -32,6 +85,7 @@ class admin_reservationController extends Controller
             ->where("id", $request->id)
             ->update(["status" => 3]);
 
+            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"3");
             return  json_encode("Payment Received");
             //EMAIL HERE
         }
@@ -40,6 +94,7 @@ class admin_reservationController extends Controller
             ->where("id", $request->id)
             ->update(["status" =>5]);
 
+            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"5");
             return  json_encode("Deliverables Completed");
             //EMAIL HERE
         }
@@ -48,6 +103,7 @@ class admin_reservationController extends Controller
             ->where("id", $request->id)
             ->update(["status" =>9]);
 
+            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"9");
             return  json_encode("Booking Cancelled");
             //EMAIL HERE
         }
@@ -56,11 +112,13 @@ class admin_reservationController extends Controller
             ->where("id", $request->id)
             ->update(["status" =>6]);
 
+            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"6");
             return  json_encode("Receipt Sent");
             //EMAIL HERE
         }
         elseif($request->status == "resend_receipt"){
           
+            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"6");
             return  json_encode("Receipt resent");
             //EMAIL HERE
         }else{
@@ -154,7 +212,7 @@ class admin_reservationController extends Controller
 
                 }
                 elseif($row->status == "6"){
-                    $btn .= '<a class="btn btn-success" onclick="resend_receipt('.$row->id.');" title="Resend Receipt" data-target="#order_modal"><i style="color:white;" class="fa fa-share"" aria-hidden="true"></i></a> ';
+                    // $btn .= '<a class="btn btn-success" onclick="resend_receipt('.$row->id.');" title="Resend Receipt" data-target="#order_modal"><i style="color:white;" class="fa fa-share"" aria-hidden="true"></i></a> ';
 
                 }
                 
