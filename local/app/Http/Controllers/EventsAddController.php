@@ -16,7 +16,7 @@ class EventsAddController extends Controller
     public function genTable(){
         
         $addOn = DB::table("tbl_add_ons")
-            ->select("tbl_add_ons.*")
+            ->orderBy('id', 'DESC')
             ->get();
 
         $addOn = collect($addOn);
@@ -51,11 +51,13 @@ class EventsAddController extends Controller
         ->addColumn('action', function($row) {
             
             if($row->is_active == "1"){
-                $btn = '<a class="btn btn-primary btn-xs" title="Update" data-toggle="modal" onclick="getOrderList('.$row->id.');" data-target="#order_modal"><i style="color:white;" class="fa fa-pencil" aria-hidden="true"></i></a> ';
-                $btn .= '<a class="btn btn-warning btn-xs" onclick="approve('.$row->id.');" title="Set to Innactivate" data-target="#order_modal"><i style="color:white;" class="fa fa-ban" aria-hidden="true"></i></a> ';
+                $btn = '<a class="btn btn-primary btn-xs update_show" title="Update" data-id="'.$row->id.'"><i style="color:white;" class="fa fa-pencil" aria-hidden="true"></i></a> ';
+                $btn .= '<a class="btn btn-warning btn-xs deactivate_menu" title="Set to Innactivate" data-id="'.$row->id.'"><i style="color:white;" class="fa fa-ban" aria-hidden="true"></i></a> ';
+                $btn .= '<a class="btn btn-danger btn-xs delete_show" title="Delete" data-id="'.$row->id.'"><i style="color:white;" class="fa fa-trash" aria-hidden="true"></i></a> ';
             }elseif($row->is_active == "0"){
-                $btn = '<a class="btn btn-primary btn-xs" title="Update" data-toggle="modal" onclick="getOrderList('.$row->id.');" data-target="#order_modal"><i style="color:white;" class="fa fa-pencil" aria-hidden="true"></i></a> ';
-                $btn .= '<a class="btn btn-success btn-xs" onclick="approve('.$row->id.');" title="Set to Active" data-target="#order_modal"><i style="color:white;" class="fa fa-check" aria-hidden="true"></i></a> ';
+                $btn = '<a class="btn btn-primary btn-xs update_show" title="Update" data-id="'.$row->id.'"><i style="color:white;" class="fa fa-pencil" aria-hidden="true"></i></a> ';
+                $btn .= '<a class="btn btn-success btn-xs activate_menu" title="Set to Active" data-id="'.$row->id.'"><i style="color:white;" class="fa fa-check" aria-hidden="true"></i></a> ';
+                $btn .= '<a class="btn btn-danger btn-xs delete_show" title="Delete" data-id="'.$row->id.'"><i style="color:white;" class="fa fa-trash" aria-hidden="true"></i></a> ';
             }
             return $btn;
         })
@@ -63,6 +65,109 @@ class EventsAddController extends Controller
         
         ->make(true);
 
+    }
+
+
+    public function add(Request $request){
+
+        $current_date = date('Y-m-d H:i:s');
+
+        DB::beginTransaction();
+        try{
+
+       DB::table("tbl_add_ons")
+                ->insert([
+                    'name' => $request->name,
+                    'description' => $request->description,       
+                    'price' => $request->price,
+                    'is_active' => 1,
+                    'date_added' => $current_date
+                  
+                ]);
+
+        DB::commit();
+        return 1;
+            } catch (\Exception $e) {
+            DB::rollback();
+        }
+         
+        
+    }
+
+    public function update(Request $request){
+
+        DB::beginTransaction();
+        try{
+
+            $current_date = date('Y-m-d H:i:s');
+
+            DB::table("tbl_add_ons")
+                     ->where('id',$request->id)
+                     ->update([
+                         'name' => $request->name,
+                         'description' => $request->description,
+                         'price' => $request->price,
+                         'is_active' => 1,
+                         'date_added' => $current_date
+                     ]);
+
+        DB::commit();
+            } catch (\Exception $e) {
+            DB::rollback();
+        }
+    }
+
+
+    public function delete(Request $request){
+
+        DB::beginTransaction();
+        try{
+
+            $current_date = date('Y-m-d H:i:s');
+
+            DB::table("tbl_add_ons")
+                     ->where('id',$request->id)
+                     ->delete();
+
+        DB::commit();
+            } catch (\Exception $e) {
+            DB::rollback();
+        }
+    }
+
+
+    public function update_view(Request $request){
+
+        $current_date = date('Y-m-d H:i:s');
+
+      return $data =  DB::table("tbl_add_ons")
+                     ->where('id',$request->id)
+                     ->get();
+    }
+
+
+    public function activate(Request $request){
+
+        $current_date = date('Y-m-d H:i:s');
+
+      return $data =  DB::table("tbl_add_ons")
+                     ->where('id',$request->id)
+                     ->update([
+                        'is_active' => 1
+                    ]);
+    }
+
+    public function deactivate(Request $request){
+
+        $current_date = date('Y-m-d H:i:s');
+
+      return $data =  DB::table("tbl_add_ons")
+                     ->where('id',$request->id)
+                     ->update([
+                        'is_active' => 0
+                    ]);
+
+                    
     }
 
 

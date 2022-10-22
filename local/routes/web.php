@@ -73,9 +73,27 @@ Route::post('customers/gentable',[CustomerController::class, 'genTable']);
 
 Route::get('/admin/events/additional',[EventsAddController::class, 'index']);
 Route::post('events/additional/gentable',[EventsAddController::class, 'gentable']);
+Route::post('events/additional/add',[EventsAddController::class, 'add']);
+Route::post('events/additional/update_view',[EventsAddController::class, 'update_view']);
+Route::post('events/additional/update',[EventsAddController::class, 'update']);
+Route::post('events/additional/delete',[EventsAddController::class, 'delete']);
+Route::post('events/additional/activate',[EventsAddController::class, 'activate']);
+Route::post('events/additional/deactivate',[EventsAddController::class, 'deactivate']);
 
 Route::get('/admin/package',[PackageController::class, 'index']);
 Route::post('package/gentable',[PackageController::class, 'gentable']);
+Route::post('package/add',[PackageController::class, 'add']);
+Route::post('package/update_view',[PackageController::class, 'update_view']);
+Route::post('package/update',[PackageController::class, 'update']);
+Route::post('package/delete',[PackageController::class, 'delete']);
+Route::post('package/activate',[PackageController::class, 'activate']);
+Route::post('package/deactivate',[PackageController::class, 'deactivate']);
+
+
+
+
+
+
 
     
 });
