@@ -70,6 +70,8 @@ Route::post('approval_process',[admin_reservationController::class, 'approval_pr
 
 Route::get('/admin/customers',[CustomerController::class, 'index']);
 Route::post('customers/gentable',[CustomerController::class, 'genTable']);
+Route::post('customers/update_view',[CustomerController::class, 'update_view']);
+Route::post('customers/update',[CustomerController::class, 'update']);
 
 Route::get('/admin/events/additional',[EventsAddController::class, 'index']);
 Route::post('events/additional/gentable',[EventsAddController::class, 'gentable']);

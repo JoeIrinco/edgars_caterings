@@ -27,7 +27,7 @@
            
             <div class="ibox-content">
 
-                <a class="btn btn-success" onclick="" title="confirm reservation" data-target="#order_modal"><i style="color:white;" class="fa fa-plus" aria-hidden="true"> Add</i> </a><br><br>
+               
 
                 <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover" id="tbl_customer">
@@ -59,33 +59,48 @@
     </div>
 </div>
 
-
-<div class="modal fade" id="order_modal" name="order_modal" tabindex="-1" role="dialog" aria-labelledby="order_m" aria-hidden="true">
+<div class="modal fade" id="update_modal" name="update_modal" tabindex="-1" role="dialog" aria-labelledby="order_m" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="order_m">Order List</h5>
+          <h5 class="modal-title" id="order_m">Update Menu</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            <table class="table table-striped table-bordered table-hover" id="tbl_order_list">
-                <thead>
-                <tr>
-                    <th>Order Name</th>
-                    <th>Qty</th>
-                    <th>Price</th>
-                    <th>Sub Total</th>
-                </tr>
-                </thead>
-                <tbody>
-    
-                </tbody>
-                </table>
+
+            <input id="id_update" type="hidden" placeholder="Package Name" class="form-control">
+
+            <div class="form-group">
+                <label>Last Name</label> 
+                <input id="last_name_text" type="text" placeholder="Package Name" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>First Name</label> 
+                <input id="first_name_text" type="text" placeholder="Description" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Middle Name</label> 
+                <input id="middle_name_text" type="text" placeholder="Middle Name" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Contact</label> 
+                <input id="contact_no_text" type="text" placeholder="Description" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label> 
+                <input id="email_text" type="email" placeholder="email" class="form-control">
+            </div>
+
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="btn_update">Save</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
       </div>
     </div>
@@ -137,6 +152,80 @@ $('#tbl_customer').DataTable({
             });
 
 }
+
+    $('body').on('click', '.update_show', function(e){
+        var id =$(this).attr("data-id");
+        $('#add_modal').modal('hide');
+ 
+
+          $.ajax({
+            type: 'POST',
+            url: url+'/customers/update_view',
+            data: {
+                _token: "{{ csrf_token() }}",
+                id:id,
+                
+                
+            },
+            success: function(data){
+                console.log(data[0].name);
+
+                $("#id_update").val(data[0].id);
+                $("#last_name_text").val(data[0].last_name);
+                $("#first_name_text").val(data[0].first_name);
+                $("#middle_name_text").val(data[0].middle_name);
+                $("#contact_no_text").val(data[0].contact_no);
+                $("#email_text").val(data[0].email);
+                
+                $('#update_modal').modal('show');
+        
+            }
+        });
+
+    });
+
+
+    $('#btn_update').on('click', function() {
+        
+        var id = $("#id_update").val();
+        var last_name = $("#last_name_text").val();
+        var first_name = $("#first_name_text").val();
+        var middle_name = $("#middle_name_text").val();
+        var contact_no = $("#contact_no_text").val();
+        var email = $("#email_text").val();
+
+        if( last_name==""|| first_name==""){
+            alert('Please Complete the form');
+        }else{
+
+        $.ajax({
+            type: 'POST',
+            url: url+'/customers/update',
+            data: {
+                _token: "{{ csrf_token() }}",
+                id: id, 
+                last_name: last_name, 
+                first_name: first_name,
+                middle_name: middle_name,
+                contact_no: contact_no,
+                email: email
+                
+            },
+            success: function(data){
+                
+                genTable();
+                $('#update_modal').modal('hide');
+                location.reload();
+                alert('Successfuly Updated');
+               
+            }
+        });
+
+        }
+  
+    });
+
+
 
 
     </script>

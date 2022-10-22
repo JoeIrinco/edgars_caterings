@@ -16,7 +16,6 @@ class CustomerController extends Controller
     public function genTable(){
         
         $customer = DB::table("tbl_customer")
-            ->select("tbl_customer.*")
             ->get();
 
         $customer = collect($customer);
@@ -39,7 +38,7 @@ class CustomerController extends Controller
 
         ->addColumn('action', function($row) {
 
-            $btn = '<a class="btn btn-primary btn-xs" title="Update" data-toggle="modal" onclick="getOrderList('.$row->id.');" data-target="#order_modal"><i style="color:white;" class="fa fa-pencil" aria-hidden="true"></i></a> ';
+            $btn = '<a class="btn btn-primary btn-xs update_show" title="Update" data-id="'.$row->id.'"><i style="color:white;" class="fa fa-pencil" aria-hidden="true"></i></a> ';
             
            
             return $btn;
@@ -48,6 +47,40 @@ class CustomerController extends Controller
         
         ->make(true);
 
+    }
+
+
+
+    public function update(Request $request){
+
+        DB::beginTransaction();
+        try{
+
+            $current_date = date('Y-m-d H:i:s');
+
+            DB::table("tbl_customer")
+                     ->where('id',$request->id)
+                     ->update([
+                         'last_name' => $request->last_name,
+                         'first_name' => $request->first_name,
+                         'middle_name' => $request->middle_name,
+                         'contact_no' => $request->contact_no,
+                         'email' => $request->email,
+                         'date_added' => $current_date
+                     ]);
+
+        DB::commit();
+            } catch (\Exception $e) {
+            DB::rollback();
+        }
+    }
+
+
+    public function update_view(Request $request){
+
+      return $data =  DB::table("tbl_customer")
+                     ->where('id',$request->id)
+                     ->get();
     }
 
 
