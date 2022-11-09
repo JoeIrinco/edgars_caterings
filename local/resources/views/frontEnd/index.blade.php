@@ -66,7 +66,7 @@
             
         </div>
         <div class="row mt-4">
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
+            <div class="item features-image сol-12 col-md-6 col-lg-2">
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="local/public/assets/images/5e3e25c307a8c057399283-1-720x432.jpg" alt="">
@@ -76,12 +76,13 @@
                             <strong>Wedding</strong></h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
+                            A wedding catering package serves one of the most important needs for soon-to-be married couples. Our different packages give soon-to-wed couples the freedom to 
+choose whether to hold a traditional wedding. Each package honors safety and guarantees to make your dream event happen in a remarkable way.<a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
                     </div>
                     
                 </div>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
+            <div class="item features-image сol-12 col-md-6 col-lg-2">
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="local/public/assets/images/tanzaoasis-com-838x573.jpg" alt="">
@@ -91,12 +92,13 @@
                             <strong>Kids Party</strong></h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
+                            There will always be a perfect package for your plan! Your decision matters as we take steps in making your dream event happen with our different kid’s 
+party packages that assure you and your guests’ satisfaction without compromising your safety. Let us help you choose the right package for your dream event. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
                     </div>
                     
                 </div>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
+            <div class="item features-image сol-12 col-md-6 col-lg-2">
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="local/public/assets/images/ek84g2rucaizsus-838x559.jpg" alt="">
@@ -106,12 +108,13 @@
                             <strong>Christening</strong></h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
+                            A christening is a Christian ceremony in which a baby is made a member of the Christian Church and is officially given his or her name. Make it complete.
+and worthwhile with our christening catering packages that correspond to your celebration of choice. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
                     </div>
                     
                 </div>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
+            <div class="item features-image сol-12 col-md-6 col-lg-2">
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="local/public/assets/images/what-to-look-out-for-in-corporate-catering-service-500x334.jpg" alt="" title="">
@@ -121,7 +124,24 @@
                             <strong>Corporate</strong></h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
+                            Edgars's Catering offers high-quality corporate catering services, helping any client conceptualize, budget, plan, and execute a private party regardless of its nature and size.
+                        <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="item features-image сol-12 col-md-6 col-lg-2">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <img src="local/public/assets/images/a.jpg" alt="" title="">
+                    </div>
+                    <div class="item-content">
+                        <h5 class="item-title mbr-fonts-style display-7">
+                            <strong>Debut</strong></h5>
+                        
+                        <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                            The coming of age is a call for celebration, whether grand, intimate, or meant to be celebrated at home. Make it complete and worthwhile with our debut catering packages that correspond to your celebration of choice.
+                        <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
                     </div>
                     
                 </div>
