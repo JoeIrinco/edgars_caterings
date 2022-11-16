@@ -46,6 +46,13 @@ Route::get('/contact',[ContactController::class, 'index']);
 Route::get('/about',[AboutController::class, 'index']);
 Route::get('/logout',[LoginController::class, 'logout']);
 Route::get('/services_catering',[CateringController::class, 'index']);
+
+Route::get('/wedding',[CateringController::class, 'wedding']);
+Route::get('/kids',[CateringController::class, 'kids']);
+Route::get('/christening',[CateringController::class, 'christening']);
+Route::get('/corporate',[CateringController::class, 'corporate']);
+Route::get('/debut',[CateringController::class, 'debut']);
+
 Route::get('/services_gown',[GownController::class, 'index']);
 
 Route::get('/reservation/{services}',[reservationController::class, 'reservation_form']);
