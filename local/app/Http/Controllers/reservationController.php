@@ -49,12 +49,14 @@ class reservationController extends Controller
             $tbl_cust = DB::table("tbl_customer")
                 ->where("id", $id)
                 ->first();
-
+     
             $tbl_reservation = DB::table("tbl_reservation")
                 ->select("tbl_reservation.*", "name")
                 ->where("customer_id", $id)
                 ->join("tbl_package_menu", "tbl_package_menu.id", "=","tbl_reservation.package_id")
                 ->first();
+
+             
 
                 if($tbl_reservation == null ){
                     $services = DB::table("tbl_package_menu")
@@ -85,8 +87,8 @@ class reservationController extends Controller
             $tbl_package = DB::table("tbl_package_menu")
                 ->orderBy("name")
                 ->orderBy("category")
+                ->where("id", "!=",$tbl_reservation->package_id )
                 ->get();
-
             $tbl_add_on = DB::table("tbl_add_ons")        
                 ->orderBy("name")    
                 ->get();

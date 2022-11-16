@@ -207,7 +207,7 @@
         <div class="row">
                 <div class="col-md-12" style="text-align: center;">
                         <button class="btn btn-info" id="proceed" >Proceed</button>
-                        <button class="btn btn-danger" id="reset" onclick="location.reload();">Reset</button>
+                        <button class="btn btn-danger" id="reset" onclick="reset();">Reset</button>
                         
                 </div>
         </div>
@@ -221,7 +221,14 @@
 @push('scripts')
     <script>
         
-        
+        function reset(){
+            var yesno = confirm("Do you want to reset the page?");
+            
+            if(yesno){
+                location.reload();
+            }
+           
+        }
 
         $( "#event_date" ).datepicker({ dateFormat: 'yy-mm-dd' });
         $('#event_time').timepicker({
