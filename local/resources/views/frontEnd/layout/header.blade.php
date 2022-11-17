@@ -38,11 +38,11 @@
 
 
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap&apos;);
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&amp; display=swap&apos;');
+/* body {
     background-color: #232331;
     font-family: &apos;Roboto&apos;, sans-serif;
-}
+} */
 #captchaBackground {
     height: 220px;
     width: 250px;
@@ -121,7 +121,7 @@ body {
                         <li class="nav-item dropdown"><a class="nav-link link text-white dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Services</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown-978">
                                 <a class="text-white dropdown-item text-primary display-4" href="{{url('services_catering')}}">Catering Services<br></a>
-                                <a class="text-white dropdown-item text-primary display-4" href="{{url('services_gown')}}">Gown Reservation</a>
+                                {{-- <a class="text-white dropdown-item text-primary display-4" href="{{url('services_gown')}}">Gown Reservation</a> --}}
                             </div>
                         </li>
                         <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="{{url('about')}}">About Us</a></li><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="{{url('contact')}}">Contact Us</a></li></ul>

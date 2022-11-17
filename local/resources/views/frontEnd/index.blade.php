@@ -77,7 +77,7 @@
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
                             A wedding catering package serves one of the most important needs for soon-to-be married couples. Our different packages give soon-to-wed couples the freedom to 
-            choose whether to hold a traditional wedding. Each package honors safety and guarantees to make your dream event happen in a remarkable way.<a href="{{url('/wedding')}}" class="text-primary">Reserve Now</a></p>
+            choose whether to hold a traditional wedding. Each package honors safety and guarantees to make your dream event happen in a remarkable way.<a href="{{url('/wedding')}}" class="text-primary">Read More</a></p>
                     </div>
                     
                 </div>
@@ -93,7 +93,7 @@
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
                             There will always be a perfect package for your plan! Your decision matters as we take steps in making your dream event happen with our different kid’s 
-party packages that assure you and your guests’ satisfaction without compromising your safety. Let us help you choose the right package for your dream event. <a href="{{url('/kids')}}" class="text-primary">Reserve Now</a></p>
+party packages that assure you and your guests’ satisfaction without compromising your safety. Let us help you choose the right package for your dream event. <a href="{{url('/kids')}}" class="text-primary">Read More</a></p>
                     </div>
                     
                 </div>
@@ -109,7 +109,7 @@ party packages that assure you and your guests’ satisfaction without compromis
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
                             A christening is a Christian ceremony in which a baby is made a member of the Christian Church and is officially given his or her name. Make it complete.
-and worthwhile with our christening catering packages that correspond to your celebration of choice. <a href="{{url('/christening')}}" class="text-primary">Reserve Now</a></p>
+and worthwhile with our christening catering packages that correspond to your celebration of choice. <a href="{{url('/christening')}}" class="text-primary">Read More</a></p>
                     </div>
                     
                 </div>
@@ -125,7 +125,7 @@ and worthwhile with our christening catering packages that correspond to your ce
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
                             Edgars's Catering offers high-quality corporate catering services, helping any client conceptualize, budget, plan, and execute a private party regardless of its nature and size.
-                        <a href="{{url('/corporate')}}" class="text-primary">Reserve Now</a></p>
+                        <a href="{{url('/corporate')}}" class="text-primary">Read More</a></p>
                     </div>
                     
                 </div>
@@ -141,7 +141,7 @@ and worthwhile with our christening catering packages that correspond to your ce
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
                             The coming of age is a call for celebration, whether grand, intimate, or meant to be celebrated at home. Make it complete and worthwhile with our debut catering packages that correspond to your celebration of choice.
-                        <a href="{{url('/debut')}}" class="text-primary">Reserve Now</a></p>
+                        <a href="{{url('/debut')}}" class="text-primary">Read More</a></p>
                     </div>
                     
                 </div>
@@ -150,7 +150,7 @@ and worthwhile with our christening catering packages that correspond to your ce
     </div>
 </section>
 
-<section data-bs-version="5.1" class="gallery3 cid-tk1WfbmPNt" id="gallery3-2n">
+{{-- <section data-bs-version="5.1" class="gallery3 cid-tk1WfbmPNt" id="gallery3-2n">
     
     
     <div class="container-fluid">
@@ -171,7 +171,7 @@ and worthwhile with our christening catering packages that correspond to your ce
                         </h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Read More</a></p>
                     </div>
                     
                 </div>
@@ -187,7 +187,7 @@ and worthwhile with our christening catering packages that correspond to your ce
                         </h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Read More</a></p>
                     </div>
                     
                 </div>
@@ -203,7 +203,7 @@ and worthwhile with our christening catering packages that correspond to your ce
                         </h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Read More</a></p>
                     </div>
                     
                 </div>
@@ -219,14 +219,14 @@ and worthwhile with our christening catering packages that correspond to your ce
                         </h5>
                         
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Reserve Now</a></p>
+                            Card Text. You don't have to code to create a site with Mobirise Builder. <a href="{{url('/reservation/all')}}" class="text-primary">Read More</a></p>
                     </div>
                     
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 {{--  --}}
 <section data-bs-version="5.1" class="gallery6 mbr-gallery cid-tmZ6jFHg8q" id="gallery6-o">
