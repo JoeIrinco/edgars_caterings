@@ -8,6 +8,22 @@ use DB;
 
 class reservationController extends Controller
 {
+    public function check_date($date){
+      $reservation =   DB::table("tbl_reservation")
+            ->where("date_reserved", date("Y-m-d", strtotime($date)))
+            ->where("status", "!=", 0)
+            ->where("status", "!=", 9)   
+            ->first();
+        if($reservation != null){
+            return json_encode($date." This date is already booked, Please select other date");
+        }else{
+            return json_encode("Available");
+        }
+    }
+
+
+
+
       public function reservation_form($selected_service){
  
 
@@ -84,10 +100,8 @@ class reservationController extends Controller
                     ->with("selected_service", "all");
                 }
 
-            $tbl_package = DB::table("tbl_package_menu")
+            $tbl_package = DB::table("tbl_food_menu")
                 ->orderBy("name")
-                ->orderBy("category")
-                ->where("id", "!=",$tbl_reservation->package_id )
                 ->get();
             $tbl_add_on = DB::table("tbl_add_ons")        
                 ->orderBy("name")    
@@ -111,7 +125,7 @@ class reservationController extends Controller
 
       public function add_order(Request $request){
 
-        $order = DB::table("tbl_package_menu")
+        $order = DB::table("tbl_food_menu")
                 ->where("id", $request->id)
                 ->first();
         return json_encode($order);
@@ -128,6 +142,7 @@ class reservationController extends Controller
       }
 
       public function submit_order(Request $request){
+        
             $total_price = 0;
         foreach($request->order as $key => $order){
             $data = explode(':',$order);

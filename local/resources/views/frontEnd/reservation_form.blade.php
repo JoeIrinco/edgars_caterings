@@ -1,18 +1,26 @@
 @extends('frontEnd.layout.main')
 @section('content')
-    
+    <style>
+        .label-only{
+            pointer-events: none;
+        }
+        body{
+            font-family: "Times New Roman", Times, serif;
+        }
+      
+    </style>
 
 
 
     <div class="col-md-12" style="margin-top: 40px; margin-bottom:40px;">
         
         <div class="col-md-12" style="text-align: center;">
-            <label class="btn btn-warning"><h1>Reservation Form</h1></label>
+            <label class="btn btn-warning label-only" ><h1>Reservation Form</h1></label>
         </div>
 
         <div class="row">
             <div class="col-md-3" style="text-align: right;">
-                <label class="btn btn-success"> <span class="pull-right"> Last Name </span></label>
+                <label class="btn btn-success label-only"> <span class="pull-right"> Last Name </span></label>
             </div>
             <div class="col-md-6">
                 <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name">
@@ -21,7 +29,7 @@
       
         <div class="row">
             <div class="col-md-3" style="text-align: right;">
-                <label class="btn btn-success"> <span class="pull-right"> First Name </span></label>
+                <label class="btn btn-success label-only"> <span class="pull-right"> First Name </span></label>
             </div>
             <div class="col-md-6">
                 <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name">
@@ -30,7 +38,7 @@
       
         <div class="row">
             <div class="col-md-3" style="text-align: right;">
-                <label class="btn btn-success"> <span class="pull-right"> Middle Name </span></label>
+                <label class="btn btn-success label-only"> <span class="pull-right"> Middle Name </span></label>
             </div>
             <div class="col-md-6">
                 <input type="text" class="form-control" name="mid_name" id="mid_name" placeholder="Middle Name">
@@ -39,7 +47,7 @@
       
         <div class="row">
             <div class="col-md-3" style="text-align: right;">
-                <label class="btn btn-success"> <span class="pull-right"> Contact Number </span></label>
+                <label class="btn btn-success label-only"> <span class="pull-right"> Contact Number </span></label>
             </div>
             <div class="col-md-6">
                 <input type="text" class="form-control" name="contact" id="contact" placeholder="Contact Number">
@@ -48,7 +56,7 @@
 
         <div class="row">
             <div class="col-md-3" style="text-align: right;">
-                <label class="btn btn-success"> <span class="pull-right"> E-Mail </span></label>
+                <label class="btn btn-success label-only"> <span class="pull-right"> E-Mail </span></label>
             </div>
             <div class="col-md-6">
                 <input type="email" class="form-control" name="email" id="email" placeholder="E-Mail">
@@ -58,10 +66,10 @@
 
         <div class="row">
             <div class="col-md-3" style="text-align: right;">
-                <label class="btn btn-success"> <span class="pull-right"> Message </span></label>
+                <label class="btn btn-success label-only"> <span class="pull-right"> Description </span></label>
             </div>
             <div class="col-md-6">
-                <textarea name="message" id="message" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+                <textarea name="message" id="message" cols="30" rows="2" class="form-control" placeholder="Description"></textarea>
             </div>
         </div>
 
@@ -69,7 +77,7 @@
         
         <div class="row">
             <div class="col-md-3" style="text-align: right;">
-                <label class="btn btn-success"> <span class="pull-right"> Packages </span></label>
+                <label class="btn btn-success label-only"> <span class="pull-right"> Packages </span></label>
             </div>
             <div class="col-md-6">
               
@@ -87,7 +95,7 @@
         <div class="row">
           
                 <div class="col-md-3" style="text-align: right;">
-                    <label class="btn btn-success"> <span class="pull-right"> CAPTCHA </span></label>
+                    <label class="btn btn-success label-only"> <span class="pull-right"> CAPTCHA </span></label>
                 </div>
 
                 <div class="col-md-6" style="text-align: center">

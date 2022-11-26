@@ -25,7 +25,7 @@
             <div class="col-md-12 col-lg-10">
                 <hr class="line">
                 <p class="mbr-text align-center mbr-fonts-style my-4 display-5">
-                    <em>we have been blessed to be a part of thousands of weddings, debuts, kid's parties, and corporate events</em>
+                    <em>We have been blessed to be a part of thousands of weddings, debuts, kid's parties, and corporate events.</em>
                 </p>
                 <hr class="line">
             </div>
@@ -46,52 +46,52 @@
         <div class="row mbr-gallery mt-4">
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYaRKSu-modal" data-bs-target="#tnjOYaRKSu-modal">
-                    <img class="w-100" src="local/public/assets/images/1-838x629.jpg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-tnjOYaRKSu" data-bs-target="#lb-tnjOYaRKSu">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/1-838x629.jpg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-tnjOYaRKSu" data-bs-target="#lb-tnjOYaRKSu">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
-                    Image Caption and <a href="#" class="text-primary">Link</a>
+                    
                 </h6>
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYaRKSu-modal" data-bs-target="#tnjOYaRKSu-modal">
-                    <img class="w-100" src="local/public/assets/images/2-838x629.jpg" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-tnjOYaRKSu" data-bs-target="#lb-tnjOYaRKSu">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/2-838x629.jpg" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-tnjOYaRKSu" data-bs-target="#lb-tnjOYaRKSu">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
-                    Image Caption and <a href="#" class="text-primary">Link</a>
+                    
                 </h6>
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYaRKSu-modal" data-bs-target="#tnjOYaRKSu-modal">
-                    <img class="w-100" src="local/public/assets/images/3-838x629.jpg" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-tnjOYaRKSu" data-bs-target="#lb-tnjOYaRKSu">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/3-838x629.jpg" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-tnjOYaRKSu" data-bs-target="#lb-tnjOYaRKSu">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
-                    Image Caption and <a href="#" class="text-primary">Link</a>
+                    
                 </h6>
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYaRKSu-modal" data-bs-target="#tnjOYaRKSu-modal">
-                    <img class="w-100" src="local/public/assets/images/4-838x629.jpg" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-tnjOYaRKSu" data-bs-target="#lb-tnjOYaRKSu">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/4-838x629.jpg" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-tnjOYaRKSu" data-bs-target="#lb-tnjOYaRKSu">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
-                    Image Caption and <a href="#" class="text-primary">Link</a>
+                    
                 </h6>
             </div>
         </div>
 
         <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="tnjOYaRKSu-modal">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog mw-100" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="carousel slide carousel-fade" id="lb-tnjOYaRKSu" data-ride="carousel" data-bs-ride="carousel" data-interval="5000" data-bs-interval="5000">
@@ -143,36 +143,36 @@
         <div class="row mbr-gallery mt-4">
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYciBTU-modal" data-bs-target="#tnjOYciBTU-modal">
-                    <img class="w-100" src="local/public/assets/images/5-838x629.jpg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-tnjOYciBTU" data-bs-target="#lb-tnjOYciBTU">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/5-838x629.jpg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-tnjOYciBTU" data-bs-target="#lb-tnjOYciBTU">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYciBTU-modal" data-bs-target="#tnjOYciBTU-modal">
-                    <img class="w-100" src="local/public/assets/images/6-838x629.jpg" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-tnjOYciBTU" data-bs-target="#lb-tnjOYciBTU">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/6-838x629.jpg" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-tnjOYciBTU" data-bs-target="#lb-tnjOYciBTU">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYciBTU-modal" data-bs-target="#tnjOYciBTU-modal">
-                    <img class="w-100" src="local/public/assets/images/7-838x629.jpg" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-tnjOYciBTU" data-bs-target="#lb-tnjOYciBTU">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/7-838x629.jpg" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-tnjOYciBTU" data-bs-target="#lb-tnjOYciBTU">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYciBTU-modal" data-bs-target="#tnjOYciBTU-modal">
-                    <img class="w-100" src="local/public/assets/images/8-838x629.jpg" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-tnjOYciBTU" data-bs-target="#lb-tnjOYciBTU">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/8-838x629.jpg" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-tnjOYciBTU" data-bs-target="#lb-tnjOYciBTU">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 
@@ -180,7 +180,7 @@
         </div>
 
         <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="tnjOYciBTU-modal">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog mw-100" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="carousel slide carousel-fade" id="lb-tnjOYciBTU" data-ride="carousel" data-bs-ride="carousel" data-interval="5000" data-bs-interval="5000">
@@ -232,36 +232,36 @@
         <div class="row mbr-gallery mt-4">
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYdtGIo-modal" data-bs-target="#tnjOYdtGIo-modal">
-                    <img class="w-100" src="local/public/assets/images/9-838x629.jpg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-tnjOYdtGIo" data-bs-target="#lb-tnjOYdtGIo">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/9-838x629.jpg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-tnjOYdtGIo" data-bs-target="#lb-tnjOYdtGIo">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYdtGIo-modal" data-bs-target="#tnjOYdtGIo-modal">
-                    <img class="w-100" src="local/public/assets/images/10-838x629.jpg" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-tnjOYdtGIo" data-bs-target="#lb-tnjOYdtGIo">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/10-838x629.jpg" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-tnjOYdtGIo" data-bs-target="#lb-tnjOYdtGIo">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYdtGIo-modal" data-bs-target="#tnjOYdtGIo-modal">
-                    <img class="w-100" src="local/public/assets/images/12-838x629.jpg" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-tnjOYdtGIo" data-bs-target="#lb-tnjOYdtGIo">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/12-838x629.jpg" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-tnjOYdtGIo" data-bs-target="#lb-tnjOYdtGIo">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYdtGIo-modal" data-bs-target="#tnjOYdtGIo-modal">
-                    <img class="w-100" src="local/public/assets/images/13-838x629.jpg" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-tnjOYdtGIo" data-bs-target="#lb-tnjOYdtGIo">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/13-838x629.jpg" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-tnjOYdtGIo" data-bs-target="#lb-tnjOYdtGIo">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 
@@ -269,7 +269,7 @@
         </div>
 
         <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="tnjOYdtGIo-modal">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog mw-100" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="carousel slide carousel-fade" id="lb-tnjOYdtGIo" data-ride="carousel" data-bs-ride="carousel" data-interval="5000" data-bs-interval="5000">
@@ -321,36 +321,36 @@
         <div class="row mbr-gallery mt-4">
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYeGONX-modal" data-bs-target="#tnjOYeGONX-modal">
-                    <img class="w-100" src="local/public/assets/images/14-720x540.jpg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-tnjOYeGONX" data-bs-target="#lb-tnjOYeGONX">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/14-720x540.jpg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-tnjOYeGONX" data-bs-target="#lb-tnjOYeGONX">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYeGONX-modal" data-bs-target="#tnjOYeGONX-modal">
-                    <img class="w-100" src="local/public/assets/images/15-838x629.jpg" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-tnjOYeGONX" data-bs-target="#lb-tnjOYeGONX">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/15-838x629.jpg" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-tnjOYeGONX" data-bs-target="#lb-tnjOYeGONX">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 
             </div>
             {{-- <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYeGONX-modal" data-bs-target="#tnjOYeGONX-modal">
-                    <img class="w-100" src="local/public/assets/images/11-838x838.jpg" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-tnjOYeGONX" data-bs-target="#lb-tnjOYeGONX">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/11-838x838.jpg" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-tnjOYeGONX" data-bs-target="#lb-tnjOYeGONX">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnjOYeGONX-modal" data-bs-target="#tnjOYeGONX-modal">
-                    <img class="w-100" src="local/public/assets/images/16-720x960.jpg" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-tnjOYeGONX" data-bs-target="#lb-tnjOYeGONX">
+                    <img class="w-100" style="height: 30vh;" src="local/public/assets/images/16-720x960.jpg" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-tnjOYeGONX" data-bs-target="#lb-tnjOYeGONX">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                        
                     </div>
                 </div>
                 </div>
@@ -359,7 +359,7 @@
         </div>
 
         <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="tnjOYeGONX-modal">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog mw-100" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="carousel slide carousel-fade" id="lb-tnjOYeGONX" data-ride="carousel" data-bs-ride="carousel" data-interval="5000" data-bs-interval="5000">

@@ -2,7 +2,7 @@
     
     <h4>Good Day Mr/Mrs {{$name_to}} ,</h4>   
     <h3>RESERVATION ALERT: </h3>
-    {{$status_msg}}
+    <h4> {{$status_msg}} </h4>
     <div>
        
         <div>
@@ -29,6 +29,69 @@
             </table>
         </div>
 
+        <br>
+
+        <div>
+            <table border =1>
+        
+                <?php 
+                       echo " <tr>
+                                        <th colspan=4> ORDER LIST </th>
+                                </tr>";
+
+                                echo " <tr>
+                                        <th> ORDER NAME </th>
+                                        <th> INCLUSION </th>
+                                        <th> QTY </th>
+                                        <th> PRICE </th>
+                                        
+                                </tr>";
+
+
+
+                    foreach($order_list as $order){
+
+                       
+
+                        echo "<tr>";
+                        echo  "<td>".$order["order_name"]."</td>";
+                      
+                            if($order["liner"] > 1){
+                                $inc_arr = explode("*", $order["inclusion"]);
+                                echo "<td>";
+                            foreach($inc_arr as $key=> $inc){
+                                if($key > 1){
+                                    echo "<br>";
+                                }
+                                
+                                if($key > 0){
+                                    echo $key.".) ".$inc;
+                                }
+                            }  
+                        echo "</td>";
+
+
+                            }else{
+                                echo  "<td>".$order["inclusion"]."</td>";
+                            }
+                          
+                        
+                        echo  "<td>".$order["qty"]."</td>";
+                        echo  "<td>".$order["price"]."</td>";
+                        echo  "</tr>";
+
+
+
+                    }
+
+                ?>
+
+
+              
+            </table>
+        </div>
+  
+
         <h1><u><b> </b></u></h1>
     </div>
 
@@ -44,7 +107,13 @@
 
         Edgar's Catering
     </div>
-    
+
+
+        <br>
+    <small><i style="color:red;">RESERVATION REMINDER! <br> PAYMENTS SHOULD BE DONE ON OR BEFORE TEN (10) DAYS AFTER THE CONFIRMATION OF RESERVATION  </i></small>
+
+
+
 
     <br>
 

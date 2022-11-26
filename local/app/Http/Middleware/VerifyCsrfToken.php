@@ -15,6 +15,7 @@ class VerifyCsrfToken extends Middleware
         'reservation/customer',
         'add_order',
         'add_addon',
-        'submit_order'
+        'submit_order',
+        'check_date/{date}'
     ];
 }

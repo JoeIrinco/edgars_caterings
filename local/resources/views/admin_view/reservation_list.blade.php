@@ -64,7 +64,7 @@
 
 <div class="modal fade" id="order_modal" name="order_modal" tabindex="-1" role="dialog" aria-labelledby="order_m" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <div class="modal-content" style="width: 120%">
         <div class="modal-header">
           <h5 class="modal-title" id="order_m">Order List</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -76,6 +76,8 @@
                 <thead>
                 <tr>
                     <th>Order Name</th>
+                    <th>Inclusion</th>
+                    
                     <th>Qty</th>
                     <th>Price</th>
                     <th>Sub Total</th>
@@ -101,7 +103,7 @@
 
     function approve(id){
 
-        var yesNo = confirm("Confirmed Booking?");
+        var yesNo = confirm("Confirm Booking?");
             if(yesNo){
   HoldOn.open({
      theme:"sk-cube-grid"
@@ -152,7 +154,7 @@
     }
     function paid(id){
     
-        var yesNo = confirm("Received Payment?");
+        var yesNo = confirm("Receive Payment?");
             if(yesNo){
                 HoldOn.open({
      theme:"sk-cube-grid"
@@ -310,6 +312,8 @@
                 },
                 "columns":[
                     {'data':"order_name" },
+                    {'data':"inclusion" },
+                    
                     {'data':"qty"},
                     {'data':"price"}, 
                     {'data':"sub_total"},

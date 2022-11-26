@@ -10,7 +10,7 @@ use Mail;
 class admin_reservationController extends Controller
 {
 
-    private function sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,$status){
+    private function sendEmail($real_id,$emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,$status){
  
         $status_msg = "";
         if($status == "2"){
@@ -28,8 +28,55 @@ class admin_reservationController extends Controller
         }
 
        try {
+   
+
+        $order_list = array();
+        $ordes = DB::table("tbl_order")
+            ->where("reservation_id", $real_id)
+            ->get();
+        $totals = 0;
         
-        $data = array('name_to'=> $nameto, "status_msg" => $status_msg, 'reservationid' => $reservationid,'datetime'=>$datetime, 'packs'=>$packs,'totalprice'=>'Php '.number_format($totalprice,2));
+        foreach($ordes as $order){
+            $oneline = "1";
+            if($order->menu_id > 0){
+               $data=  DB::table("tbl_food_menu")
+                    ->where("id", $order->menu_id)
+                    ->first();
+                if($data == null){
+                    $data=  DB::table("tbl_package_menu")
+                    ->where("id", $order->menu_id)
+                    ->first();
+                }else{
+                    $oneline = "2";
+                }
+            }else{
+                $data = DB::table("tbl_add_ons")
+                ->where("id", $order->add_on_id)
+                ->first();
+            }
+                if($data == null){
+                    continue;
+                }
+              
+
+            $sub_total = $order->qty * $order->price;
+            $totals += $sub_total;
+            array_push($order_list, array(
+                "liner" => $oneline,
+                "order_name" => $data->name,
+                "inclusion" => $data->description,
+                "qty" => $order->qty,
+                "price" => $order->price,
+            ));
+
+
+        }
+
+
+
+
+
+        $data = array("order_list"=> $order_list,'name_to'=> $nameto, "status_msg" => $status_msg, 'reservationid' => $reservationid,'datetime'=>$datetime, 'packs'=>$packs,'totalprice'=>'Php '.number_format($totalprice,2));
         //$data = "";
     	$email = "ilustrado.lourd@gmail.com";
       
@@ -60,6 +107,7 @@ class admin_reservationController extends Controller
         $nameto = $customer_info->last_name.", ".$customer_info->first_name;
         $emailto = $customer_info->email;
         $reservationid = $reservation_info->date_reserved."-".$reservation_info->id;
+        $real_id = $reservation_info->id;
        $datetime = $reservation_info->date_reserved." ".$reservation_info->time_reserved;
        $totalprice = $reservation_info->total_price;
         $packs = $reservation_info->no_of_packs;
@@ -67,7 +115,7 @@ class admin_reservationController extends Controller
             DB::table("tbl_reservation")
             ->where("id", $request->id)
             ->update(["status" => 2]);
-            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"2");
+            $this->sendEmail($real_id,$emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"2");
 
             return  json_encode("Confirmed! \n waiting for the payment");
 
@@ -77,7 +125,7 @@ class admin_reservationController extends Controller
             ->where("id", $request->id)
             ->update(["status" => 4]);
 
-            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"4");
+            $this->sendEmail($real_id,$emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"4");
             return  json_encode("Disapproved Booking Complete");
             //EMAIL HERE
         }elseif($request->status == "paid"){
@@ -85,7 +133,7 @@ class admin_reservationController extends Controller
             ->where("id", $request->id)
             ->update(["status" => 3]);
 
-            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"3");
+            $this->sendEmail($real_id,$emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"3");
             return  json_encode("Payment Received");
             //EMAIL HERE
         }
@@ -94,7 +142,7 @@ class admin_reservationController extends Controller
             ->where("id", $request->id)
             ->update(["status" =>5]);
 
-            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"5");
+            $this->sendEmail($real_id,$emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"5");
             return  json_encode("Deliverables Completed");
             //EMAIL HERE
         }
@@ -103,7 +151,7 @@ class admin_reservationController extends Controller
             ->where("id", $request->id)
             ->update(["status" =>9]);
 
-            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"9");
+            $this->sendEmail($real_id,$emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"9");
             return  json_encode("Booking Cancelled");
             //EMAIL HERE
         }
@@ -112,13 +160,13 @@ class admin_reservationController extends Controller
             ->where("id", $request->id)
             ->update(["status" =>6]);
 
-            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"6");
+            $this->sendEmail($real_id,$emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"6");
             return  json_encode("Receipt Sent");
             //EMAIL HERE
         }
         elseif($request->status == "resend_receipt"){
           
-            $this->sendEmail($emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"6");
+            $this->sendEmail($real_id,$emailto,$nameto,$reservationid,$datetime,$packs,$totalprice,"6");
             return  json_encode("Receipt resent");
             //EMAIL HERE
         }else{
@@ -136,6 +184,7 @@ class admin_reservationController extends Controller
                 ->select("first_name", "middle_name", "last_name", "tbl_reservation.*")
                 ->join("tbl_customer", "tbl_customer.id", "=", "tbl_reservation.customer_id")
                 ->where("status", "!=", 0)
+                ->orderBy("tbl_reservation.date_reserved", "DESC")
                 ->get();
 
 
@@ -234,22 +283,37 @@ class admin_reservationController extends Controller
                 ->where("reservation_id", $request->id)
                 ->get();
             $totals = 0;
+            
             foreach($ordes as $order){
 
                 if($order->menu_id > 0){
-                   $data=  DB::table("tbl_package_menu")
+                   $data=  DB::table("tbl_food_menu")
                         ->where("id", $order->menu_id)
                         ->first();
+                    if($data == null){
+                        $data=  DB::table("tbl_package_menu")
+                        ->where("id", $order->menu_id)
+                        ->first();
+
+
+                    }
+
+
                 }else{
                     $data = DB::table("tbl_add_ons")
                     ->where("id", $order->add_on_id)
                     ->first();
                 }
-                
+                    if($data == null){
+                        continue;
+                    }
+                  
+
                 $sub_total = $order->qty * $order->price;
                 $totals += $sub_total;
                 array_push($return_arr, array(
                     "order_name" => $data->name,
+                    "inclusion" => $data->description,
                     "qty" => $order->qty,
                     "price" => $order->price,
                     "sub_total" => number_format($sub_total,2),
@@ -259,6 +323,7 @@ class admin_reservationController extends Controller
             }
             array_push($return_arr, array(
                 "order_name" => "",
+                "inclusion" => "",
                 "qty" => "",
                 "price" => "TOTAL",
                 "sub_total" =>number_format($totals,2),

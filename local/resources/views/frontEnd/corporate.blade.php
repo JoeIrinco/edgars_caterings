@@ -25,7 +25,7 @@
             <div class="col-md-12 col-lg-10">
                 <hr class="line">
                 <p class="mbr-text align-center mbr-fonts-style my-4 display-5">
-                    <em>we have been blessed to be a part of thousands of weddings, debuts, kid's parties, and corporate events</em>
+                    <em>We have been blessed to be a part of thousands of weddings, debuts, kid's parties, and corporate events.</em>
                 </p>
                 <hr class="line">
             </div>
@@ -44,52 +44,52 @@
         <div class="row mbr-gallery mt-4">
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnmwW4jcFx-modal" data-bs-target="#tnmwW4jcFx-modal">
-                    <img class="w-100"  src="local/public/assets/images/20190315-48-838x558.jpg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-tnmwW4jcFx" data-bs-target="#lb-tnmwW4jcFx">
+                    <img class="w-100" style="height:30vh;"  src="local/public/assets/images/20190315-48-838x558.jpg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-tnmwW4jcFx" data-bs-target="#lb-tnmwW4jcFx">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                       
                     </div>
                 </div>
                 <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
-                    Image Caption and <a href="#" class="text-primary">Link</a>
+                    
                 </h6>
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnmwW4jcFx-modal" data-bs-target="#tnmwW4jcFx-modal">
-                    <img class="w-100"  src="local/public/assets/images/bd2-7767-838x557.jpg" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-tnmwW4jcFx" data-bs-target="#lb-tnmwW4jcFx">
+                    <img class="w-100" style="height:30vh;"  src="local/public/assets/images/bd2-7767-838x557.jpg" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-tnmwW4jcFx" data-bs-target="#lb-tnmwW4jcFx">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                       
                     </div>
                 </div>
                 <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
-                    Image Caption and <a href="#" class="text-primary">Link</a>
+                    
                 </h6>
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnmwW4jcFx-modal" data-bs-target="#tnmwW4jcFx-modal">
-                    <img class="w-100"  src="local/public/assets/images/christmasidol-com-750x500.jpg" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-tnmwW4jcFx" data-bs-target="#lb-tnmwW4jcFx">
+                    <img class="w-100" style="height:30vh;"  src="local/public/assets/images/christmasidol-com-750x500.jpg" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-tnmwW4jcFx" data-bs-target="#lb-tnmwW4jcFx">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                       
                     </div>
                 </div>
                 <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
-                    Image Caption and <a href="#" class="text-primary">Link</a>
+                    
                 </h6>
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnmwW4jcFx-modal" data-bs-target="#tnmwW4jcFx-modal">
-                    <img class="w-100"  src="local/public/assets/images/corporate-event-catering-838x551.png" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-tnmwW4jcFx" data-bs-target="#lb-tnmwW4jcFx">
+                    <img class="w-100" style="height:30vh;"  src="local/public/assets/images/corporate-event-catering-838x551.png" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-tnmwW4jcFx" data-bs-target="#lb-tnmwW4jcFx">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                       
                     </div>
                 </div>
                 <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
-                    Image Caption and <a href="#" class="text-primary">Link</a>
+                    
                 </h6>
             </div>
         </div>
 
         <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="tnmwW4jcFx-modal">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog mw-100" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="carousel slide carousel-fade" id="lb-tnmwW4jcFx" data-ride="carousel" data-bs-ride="carousel" data-interval="5000" data-bs-interval="5000">
@@ -141,36 +141,36 @@
         <div class="row mbr-gallery mt-4">
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnmwW5IVAH-modal" data-bs-target="#tnmwW5IVAH-modal">
-                    <img class="w-100"  src="local/public/assets/images/corporate-event-ideas-and-themes-for-this-winter1-838x440.jpg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-tnmwW5IVAH" data-bs-target="#lb-tnmwW5IVAH">
+                    <img class="w-100" style="height:30vh;"  src="local/public/assets/images/corporate-event-ideas-and-themes-for-this-winter1-838x440.jpg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-tnmwW5IVAH" data-bs-target="#lb-tnmwW5IVAH">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                       
                     </div>
                 </div>
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnmwW5IVAH-modal" data-bs-target="#tnmwW5IVAH-modal">
-                    <img class="w-100"  src="local/public/assets/images/glass-garden-event-venue-catering-garden-theme-700x500.jpg" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-tnmwW5IVAH" data-bs-target="#lb-tnmwW5IVAH">
+                    <img class="w-100" style="height:30vh;"  src="local/public/assets/images/glass-garden-event-venue-catering-garden-theme-700x500.jpg" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-tnmwW5IVAH" data-bs-target="#lb-tnmwW5IVAH">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                       
                     </div>
                 </div>
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnmwW5IVAH-modal" data-bs-target="#tnmwW5IVAH-modal">
-                    <img class="w-100"  src="local/public/assets/images/tent-resize-838x559.jpg" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-tnmwW5IVAH" data-bs-target="#lb-tnmwW5IVAH">
+                    <img class="w-100" style="height:30vh;"  src="local/public/assets/images/tent-resize-838x559.jpg" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-tnmwW5IVAH" data-bs-target="#lb-tnmwW5IVAH">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                       
                     </div>
                 </div>
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#tnmwW5IVAH-modal" data-bs-target="#tnmwW5IVAH-modal">
-                    <img class="w-100"  src="local/public/assets/images/untitled-1-838x629.jpg" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-tnmwW5IVAH" data-bs-target="#lb-tnmwW5IVAH">
+                    <img class="w-100" style="height:30vh;"  src="local/public/assets/images/untitled-1-838x629.jpg" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-tnmwW5IVAH" data-bs-target="#lb-tnmwW5IVAH">
                     <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                       
                     </div>
                 </div>
                 
@@ -178,7 +178,7 @@
         </div>
 
         <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="tnmwW5IVAH-modal">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog mw-100" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="carousel slide carousel-fade" id="lb-tnmwW5IVAH" data-ride="carousel" data-bs-ride="carousel" data-interval="5000" data-bs-interval="5000">
