@@ -1,0 +1,10 @@
+{
+    "require": {
+        "barryvdh/laravel-dompdf": "0.8.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    }
+}

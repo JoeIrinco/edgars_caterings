@@ -9,7 +9,14 @@ use DB;
 class reservationController extends Controller
 {
     public function check_date($date){
-      $reservation =   DB::table("tbl_reservation")
+        
+        $request_reserve = strtotime($date);
+        $todate = strtotime(date("Y-m-d"));
+
+        if($request_reserve < $todate){
+            return json_encode("Date invalid \n Select date today or onwards");
+        }else{
+            $reservation =   DB::table("tbl_reservation")
             ->where("date_reserved", date("Y-m-d", strtotime($date)))
             ->where("status", "!=", 0)
             ->where("status", "!=", 9)   
@@ -19,6 +26,11 @@ class reservationController extends Controller
         }else{
             return json_encode("Available");
         }
+
+        }
+
+
+     
     }
 
 

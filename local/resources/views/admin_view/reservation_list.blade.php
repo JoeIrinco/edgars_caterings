@@ -89,6 +89,7 @@
                 </table>
         </div>
         <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="print_order" onclick="print_order(this.value)">Print</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
@@ -99,7 +100,20 @@
 @endsection
 @push("scripts")
     <script>
+
         var url ="{{url('/')}}";
+
+        function print_order(id){
+            var yesno = confirm("Print order list?");
+            if(yesno){
+                window.open(url+"/print_order/"+id, "_blank");
+
+            }
+
+
+
+        }
+
 
     function approve(id){
 
@@ -320,6 +334,10 @@
 
                 ]
             });
+
+            $("#print_order").val(id);
+            
+
 
     }
 

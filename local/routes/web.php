@@ -75,6 +75,9 @@ Route::get('/admin/home',[AdminHomeController::class, 'index']);
 Route::get('/admin/reservation',[AdminHomeController::class, 'reservation']);
 Route::post('reserv/gentable',[admin_reservationController::class, 'genTable']);
 Route::post('reserv/getOrderList',[admin_reservationController::class, 'getOrderList']);
+Route::get('/print_order/{id}',[AdminHomeController::class, 'print_order']);
+
+
 Route::post('approval_process',[admin_reservationController::class, 'approval_process']);
 Route::get('/admin/home', function () {
     return redirect('/admin/reservation');
